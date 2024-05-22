@@ -30,11 +30,15 @@ class RingedLinkedList {
         self.rootNode = rootNode
     }
     
-    @discardableResult
     func crankList(times: Int) -> Node {
         for _ in 0..<times {
             crankList()
         }
+        
+        defer {
+            rootNode.next = nil
+        }
+        
         return self.node
     }
 }
@@ -46,5 +50,9 @@ class Node {
     init(next: Node? = nil, scheduleItem: ScheduleItem) {
         self.next = next
         self.scheduleItem = scheduleItem
+    }
+    
+    deinit {
+        print("NODEDEINIT")
     }
 }

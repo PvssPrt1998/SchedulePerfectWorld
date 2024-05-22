@@ -17,8 +17,6 @@ class EverydayDungeon {
     }
     
     func todaysDungeon() -> ScheduleItem {
-        let daysPassed = DateCounter().daysPassedFromDefaultDay()
-        let cranks = daysPassed % list.count
-        return list.crankList(times: cranks).scheduleItem
+        list.crankList(times: DateCounter().daysPassedFromDefaultDay() % list.count).scheduleItem
     }
 }
