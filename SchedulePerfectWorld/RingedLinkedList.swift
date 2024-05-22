@@ -17,6 +17,10 @@ class RingedLinkedList {
         self.node = rootNode
     }
     
+    deinit {
+        rootNode.next = nil
+    }
+    
     func addNode(scheduleItem: ScheduleItem) {
         let node = Node(next: self.node, scheduleItem: scheduleItem)
         self.rootNode.next = node
@@ -35,10 +39,6 @@ class RingedLinkedList {
             crankList()
         }
         
-        defer {
-            rootNode.next = nil
-        }
-        
         return self.node
     }
 }
@@ -50,9 +50,5 @@ class Node {
     init(next: Node? = nil, scheduleItem: ScheduleItem) {
         self.next = next
         self.scheduleItem = scheduleItem
-    }
-    
-    deinit {
-        print("NODEDEINIT")
     }
 }
