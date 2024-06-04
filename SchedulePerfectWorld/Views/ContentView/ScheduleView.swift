@@ -16,25 +16,7 @@ struct ScheduleView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            ScheduleRow(scheduleItem: viewModel.schedule.greeting)
-            if viewModel.schedule.preventiveWork != nil {
-                ScheduleRow(scheduleItem: viewModel.schedule.preventiveWork!)
-            }
-            if viewModel.schedule.preferableEvents != nil {
-                if !viewModel.schedule.preferableEvents!.isEmpty {
-                    ForEach(viewModel.schedule.preferableEvents!, id: \.self) { item in
-                        ScheduleRow(scheduleItem: item)
-                    }
-                }
-            }
-            
-            if viewModel.schedule.everyweekEvents != nil {
-                ForEach(viewModel.schedule.everyweekEvents!, id: \.self) { item in
-                    ScheduleRow(scheduleItem: item)
-                }
-            }
-            
-            ForEach(viewModel.schedule.everydayEvents, id: \.self) { item in
+            ForEach(viewModel.scheduleItemArray, id: \.self) { item in
                 ScheduleRow(scheduleItem: item)
             }
         }

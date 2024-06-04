@@ -152,8 +152,8 @@
 		99871C432BF71EE100F626A4 /* SchedulePerfectWorld */ = {
 			isa = PBXGroup;
 			children = (
-				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
+				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */,
 				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
