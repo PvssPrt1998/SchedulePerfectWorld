@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ScheduleView: View {
+    
+    let didClickEditButton = PassthroughSubject<Bool, Never>()
     
     @EnvironmentObject var viewModel: ViewModel
     
@@ -42,6 +45,13 @@ struct ScheduleView: View {
         .clipShape(.rect(cornerRadius: 8))
         .northWestShadow()
         .padding(15)
+        .toolbar {
+            Button {
+                didClickEditButton.send(true)
+            } label: {
+                Text("Edit")
+            }
+        }
     }
 }
 

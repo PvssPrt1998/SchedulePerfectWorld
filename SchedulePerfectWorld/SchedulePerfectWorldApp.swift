@@ -14,6 +14,7 @@ struct SchedulePerfectWorldApp: App {
     
     var body: some Scene {
         WindowGroup {
+            //ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(path: NavigationPath()))
             ContentView()
                 .environmentObject(viewModel)
                 .preferredColorScheme(viewModel.colorSchemeStateManager.appearance.getColorScheme())

@@ -6,31 +6,34 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
+    @StateObject var scheduleViewCoordinator = ScheduleViewCoordinator(path: NavigationPath())
+    
     var body: some View {
-        NavigationStack {
+        
+        NavigationStack(path: $scheduleViewCoordinator.path) {
             ZStack {
                 Color.element
                     .ignoresSafeArea()
-                ScheduleView()
-            }
-            .toolbar {
-                NavigationLink {
-                    EditView()
-                } label: {
-                    Text("Edit")
-                }
+                scheduleViewCoordinator.build()
+                    .navigationDestination(for: EditFlowCoordinator.self) { coordinator in
+                        coordinator.build()
+                    }
             }
         }
+        //.environmentObject(scheduleViewCoordinator)
         .environmentObject(viewModel)
     }
 }
 
-#Preview {
-    ContentView()
-        .environmentObject(ViewModel())
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(ViewModel())
+    }
 }

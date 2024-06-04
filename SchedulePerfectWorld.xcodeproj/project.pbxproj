@@ -42,6 +42,11 @@
 		99871C792BF78BBF00F626A4 /* RingedLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */; };
 		99871C7D2BF79DBF00F626A4 /* DateCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C7C2BF79DBF00F626A4 /* DateCounter.swift */; };
 		99871C802BF7CC1B00F626A4 /* ScheduleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */; };
+		99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */; };
+		99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */; };
+		99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */; };
+		99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */; };
+		99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +86,11 @@
 		99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingedLinkedList.swift; sourceTree = "<group>"; };
 		99871C7C2BF79DBF00F626A4 /* DateCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCounter.swift; sourceTree = "<group>"; };
 		99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRowView.swift; sourceTree = "<group>"; };
+		99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewCoordinator.swift; sourceTree = "<group>"; };
+		99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +152,9 @@
 		99871C432BF71EE100F626A4 /* SchedulePerfectWorld */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
+				99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */,
 				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
 				990198992BFB88C800BFB37C /* Views */,
@@ -192,6 +204,7 @@
 		99871C602BF7578E00F626A4 /* EditView */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */,
 				99871C562BF72E7300F626A4 /* EditView.swift */,
 				991B73BA2BF9E5B600A10CD5 /* GreetingView.swift */,
 				99871C612BF757A800F626A4 /* PreventiveWorkView.swift */,
@@ -225,11 +238,21 @@
 		99871C7E2BF7CC0800F626A4 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */,
 				99871C462BF71EE100F626A4 /* ContentView.swift */,
 				99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */,
 				9901988F2BFA2B2000BFB37C /* ScheduleView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		99F6B4F62C0F2FBE002E8CF4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */,
+				99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99871C772BF76F4500F626A4 /* AddedPreferableEventRowView.swift in Sources */,
+				99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
 				99871C6B2BF75CC600F626A4 /* AddedPreferableEventView.swift in Sources */,
 				990198722BFA01F800BFB37C /* ScheduleMaker.swift in Sources */,
@@ -317,6 +341,7 @@
 				990198962BFB853E00BFB37C /* PlusButton.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
 				990198882BFA190100BFB37C /* PreferableEventsViewStateManager.swift in Sources */,
+				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
 				99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */,
 				9901988A2BFA1E7400BFB37C /* GreetingViewStateManager.swift in Sources */,
 				99871C572BF72E7300F626A4 /* EditView.swift in Sources */,
@@ -324,6 +349,7 @@
 				991B73BD2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift in Sources */,
 				990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */,
 				99871C472BF71EE100F626A4 /* ContentView.swift in Sources */,
+				99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */,
 				990198942BFB719500BFB37C /* AddedTextField.swift in Sources */,
 				990198922BFB5B4400BFB37C /* Events.swift in Sources */,
 				99871C7D2BF79DBF00F626A4 /* DateCounter.swift in Sources */,
@@ -333,7 +359,9 @@
 				990198842BFA0ACC00BFB37C /* EverydayDungeon.swift in Sources */,
 				99871C692BF75CB500F626A4 /* AddPreferableEventView.swift in Sources */,
 				99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */,
+				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
 				99871C662BF75B7300F626A4 /* AddOrRemoveButton.swift in Sources */,
+				99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */,
 				990198982BFB85F300BFB37C /* MinusButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
