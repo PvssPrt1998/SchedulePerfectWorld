@@ -12,12 +12,15 @@ final class EditFlowCoordinator: ObservableObject, Hashable {
 
     private var id: UUID
     
-    init() {
+    var viewModelFactory: ViewModelFactory
+    
+    init(viewModelFactory: ViewModelFactory) {
         self.id = UUID()
+        self.viewModelFactory = viewModelFactory
     }
     
     @ViewBuilder func build() -> some View {
-        EditView()
+        EditView1(viewModel: viewModelFactory.makeEditViewModel())
     }
     
 //    func editView() -> some View {

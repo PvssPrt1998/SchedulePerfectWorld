@@ -10,6 +10,8 @@ import Combine
 
 final class ScheduleViewCoordinator: ObservableObject {
     
+    var viewModelFactory = ViewModelFactory()
+    
     @Published var path: NavigationPath
     
     private var cancellables = Set<AnyCancellable>()
@@ -27,7 +29,7 @@ final class ScheduleViewCoordinator: ObservableObject {
     }
     
     private func scheduleView() -> some View {
-        let scheduleView = ScheduleView()
+        let scheduleView = ScheduleView(viewModel1: viewModelFactory.makeScheduleViewModel())
         bind(view: scheduleView)
         return scheduleView
     }
@@ -45,7 +47,7 @@ final class ScheduleViewCoordinator: ObservableObject {
     }
     
     private func makeEditViewCoordinator() {
-        self.push(EditFlowCoordinator())
+        self.push(EditFlowCoordinator(viewModelFactory: viewModelFactory))
     }
 }
 

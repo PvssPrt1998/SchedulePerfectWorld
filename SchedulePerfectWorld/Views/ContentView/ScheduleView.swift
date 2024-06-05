@@ -14,9 +14,14 @@ struct ScheduleView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
+    var viewModel1: ScheduleViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            ForEach(viewModel.scheduleItemArray, id: \.self) { item in
+//            ForEach(viewModel.scheduleItemArray, id: \.self) { item in
+//                ScheduleRow(scheduleItem: item)
+//            }
+            ForEach(viewModel1.scheduleItemArray, id: \.self) { item in
                 ScheduleRow(scheduleItem: item)
             }
         }
@@ -38,6 +43,6 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView()
+    ScheduleView(viewModel1: ScheduleViewModel(scheduleController: ScheduleController()))
         .environmentObject(ViewModel())
 }

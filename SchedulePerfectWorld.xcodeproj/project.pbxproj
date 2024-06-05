@@ -15,12 +15,11 @@
 		9901988A2BFA1E7400BFB37C /* GreetingViewStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198892BFA1E7400BFB37C /* GreetingViewStateManager.swift */; };
 		990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901988F2BFA2B2000BFB37C /* ScheduleView.swift */; };
 		990198922BFB5B4400BFB37C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198912BFB5B4400BFB37C /* Events.swift */; };
-		990198942BFB719500BFB37C /* AddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198932BFB719500BFB37C /* AddedTextField.swift */; };
+		990198942BFB719500BFB37C /* AddedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198932BFB719500BFB37C /* AddedText.swift */; };
 		990198962BFB853E00BFB37C /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198952BFB853E00BFB37C /* PlusButton.swift */; };
 		990198982BFB85F300BFB37C /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198972BFB85F300BFB37C /* MinusButton.swift */; };
 		9901989B2BFB916700BFB37C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901989A2BFB916700BFB37C /* Appearance.swift */; };
 		991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */; };
-		991B73BB2BF9E5B600A10CD5 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73BA2BF9E5B600A10CD5 /* GreetingView.swift */; };
 		991B73BD2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73BC2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift */; };
 		99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */; };
 		99871C472BF71EE100F626A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C462BF71EE100F626A4 /* ContentView.swift */; };
@@ -33,7 +32,7 @@
 		99871C5D2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C5C2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift */; };
 		99871C622BF757A800F626A4 /* PreventiveWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C612BF757A800F626A4 /* PreventiveWorkView.swift */; };
 		99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C632BF7582200F626A4 /* PreferableEventView.swift */; };
-		99871C662BF75B7300F626A4 /* AddOrRemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C652BF75B7300F626A4 /* AddOrRemoveButton.swift */; };
+		99871C662BF75B7300F626A4 /* AddOrRemoveButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C652BF75B7300F626A4 /* AddOrRemoveButton2.swift */; };
 		99871C692BF75CB500F626A4 /* AddPreferableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C682BF75CB500F626A4 /* AddPreferableEventView.swift */; };
 		99871C6B2BF75CC600F626A4 /* AddedPreferableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C6A2BF75CC600F626A4 /* AddedPreferableEventView.swift */; };
 		99871C712BF75ED000F626A4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C702BF75ED000F626A4 /* Color+Extension.swift */; };
@@ -47,6 +46,17 @@
 		99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */; };
 		99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */; };
 		99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */; };
+		99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */; };
+		99F6B5062C0F739D002E8CF4 /* EditView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5052C0F739D002E8CF4 /* EditView1.swift */; };
+		99F6B5082C0F7550002E8CF4 /* GreetingEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */; };
+		99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */; };
+		99F6B50F2C1070D8002E8CF4 /* TextViewWithButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */; };
+		99F6B5122C107479002E8CF4 /* EmptyTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5112C107479002E8CF4 /* EmptyTextFieldState.swift */; };
+		99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5132C10748E002E8CF4 /* TextFieldWithTextState.swift */; };
+		99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5152C1074A6002E8CF4 /* AddedTextState.swift */; };
+		99F6B5192C107652002E8CF4 /* BaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5182C107652002E8CF4 /* BaseState.swift */; };
+		99F6B51D2C109001002E8CF4 /* TextViewWithButtonContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */; };
+		99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,12 +68,11 @@
 		990198892BFA1E7400BFB37C /* GreetingViewStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewStateManager.swift; sourceTree = "<group>"; };
 		9901988F2BFA2B2000BFB37C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		990198912BFB5B4400BFB37C /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		990198932BFB719500BFB37C /* AddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedTextField.swift; sourceTree = "<group>"; };
+		990198932BFB719500BFB37C /* AddedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedText.swift; sourceTree = "<group>"; };
 		990198952BFB853E00BFB37C /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		990198972BFB85F300BFB37C /* MinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		9901989A2BFB916700BFB37C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithBorderView.swift; sourceTree = "<group>"; };
-		991B73BA2BF9E5B600A10CD5 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		991B73BC2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeStateManager.swift; sourceTree = "<group>"; };
 		99871C412BF71EE100F626A4 /* SchedulePerfectWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulePerfectWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePerfectWorldApp.swift; sourceTree = "<group>"; };
@@ -77,7 +86,7 @@
 		99871C5C2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkViewStateManager.swift; sourceTree = "<group>"; };
 		99871C612BF757A800F626A4 /* PreventiveWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkView.swift; sourceTree = "<group>"; };
 		99871C632BF7582200F626A4 /* PreferableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventView.swift; sourceTree = "<group>"; };
-		99871C652BF75B7300F626A4 /* AddOrRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButton.swift; sourceTree = "<group>"; };
+		99871C652BF75B7300F626A4 /* AddOrRemoveButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButton2.swift; sourceTree = "<group>"; };
 		99871C682BF75CB500F626A4 /* AddPreferableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPreferableEventView.swift; sourceTree = "<group>"; };
 		99871C6A2BF75CC600F626A4 /* AddedPreferableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedPreferableEventView.swift; sourceTree = "<group>"; };
 		99871C702BF75ED000F626A4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -91,6 +100,17 @@
 		99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewCoordinator.swift; sourceTree = "<group>"; };
 		99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowCoordinator.swift; sourceTree = "<group>"; };
+		99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		99F6B5052C0F739D002E8CF4 /* EditView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView1.swift; sourceTree = "<group>"; };
+		99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingEditView.swift; sourceTree = "<group>"; };
+		99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
+		99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithButtonState.swift; sourceTree = "<group>"; };
+		99F6B5112C107479002E8CF4 /* EmptyTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTextFieldState.swift; sourceTree = "<group>"; };
+		99F6B5132C10748E002E8CF4 /* TextFieldWithTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTextState.swift; sourceTree = "<group>"; };
+		99F6B5152C1074A6002E8CF4 /* AddedTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedTextState.swift; sourceTree = "<group>"; };
+		99F6B5182C107652002E8CF4 /* BaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseState.swift; sourceTree = "<group>"; };
+		99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithButtonContext.swift; sourceTree = "<group>"; };
+		99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +172,11 @@
 		99871C432BF71EE100F626A4 /* SchedulePerfectWorld */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B50B2C1070A8002E8CF4 /* ButtonState */,
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
 				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */,
+				99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */,
 				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
 				990198992BFB88C800BFB37C /* Views */,
@@ -181,10 +203,11 @@
 			children = (
 				990198952BFB853E00BFB37C /* PlusButton.swift */,
 				99871C582BF738FF00F626A4 /* DatePickerView.swift */,
-				99871C652BF75B7300F626A4 /* AddOrRemoveButton.swift */,
+				99871C652BF75B7300F626A4 /* AddOrRemoveButton2.swift */,
 				991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */,
-				990198932BFB719500BFB37C /* AddedTextField.swift */,
+				990198932BFB719500BFB37C /* AddedText.swift */,
 				990198972BFB85F300BFB37C /* MinusButton.swift */,
+				99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -204,9 +227,10 @@
 		99871C602BF7578E00F626A4 /* EditView */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B5052C0F739D002E8CF4 /* EditView1.swift */,
 				99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */,
 				99871C562BF72E7300F626A4 /* EditView.swift */,
-				991B73BA2BF9E5B600A10CD5 /* GreetingView.swift */,
+				99F6B5222C109A7B002E8CF4 /* GreetingView */,
 				99871C612BF757A800F626A4 /* PreventiveWorkView.swift */,
 				99871C672BF75C6E00F626A4 /* PreferableEventView */,
 			);
@@ -253,6 +277,44 @@
 				99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		99F6B50B2C1070A8002E8CF4 /* ButtonState */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */,
+				99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */,
+				99F6B5102C10745B002E8CF4 /* ButtonStates */,
+			);
+			path = ButtonState;
+			sourceTree = "<group>";
+		};
+		99F6B5102C10745B002E8CF4 /* ButtonStates */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5182C107652002E8CF4 /* BaseState.swift */,
+				99F6B5172C10763B002E8CF4 /* ConcreteButtonStates */,
+			);
+			path = ButtonStates;
+			sourceTree = "<group>";
+		};
+		99F6B5172C10763B002E8CF4 /* ConcreteButtonStates */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5112C107479002E8CF4 /* EmptyTextFieldState.swift */,
+				99F6B5132C10748E002E8CF4 /* TextFieldWithTextState.swift */,
+				99F6B5152C1074A6002E8CF4 /* AddedTextState.swift */,
+			);
+			path = ConcreteButtonStates;
+			sourceTree = "<group>";
+		};
+		99F6B5222C109A7B002E8CF4 /* GreetingView */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */,
+				99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */,
+			);
+			path = GreetingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,31 +388,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				99871C772BF76F4500F626A4 /* AddedPreferableEventRowView.swift in Sources */,
+				99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */,
 				99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
 				99871C6B2BF75CC600F626A4 /* AddedPreferableEventView.swift in Sources */,
+				99F6B5062C0F739D002E8CF4 /* EditView1.swift in Sources */,
 				990198722BFA01F800BFB37C /* ScheduleMaker.swift in Sources */,
 				99871C712BF75ED000F626A4 /* Color+Extension.swift in Sources */,
 				99871C592BF738FF00F626A4 /* DatePickerView.swift in Sources */,
+				99F6B5192C107652002E8CF4 /* BaseState.swift in Sources */,
+				99F6B51D2C109001002E8CF4 /* TextViewWithButtonContext.swift in Sources */,
 				99871C802BF7CC1B00F626A4 /* ScheduleRowView.swift in Sources */,
 				9901989B2BFB916700BFB37C /* Appearance.swift in Sources */,
+				99F6B5082C0F7550002E8CF4 /* GreetingEditView.swift in Sources */,
 				99871C532BF71FC100F626A4 /* Model.swift in Sources */,
 				99871C622BF757A800F626A4 /* PreventiveWorkView.swift in Sources */,
+				99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */,
 				990198822BFA0A8A00BFB37C /* ClanHall.swift in Sources */,
 				99871C5D2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift in Sources */,
+				99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */,
 				990198962BFB853E00BFB37C /* PlusButton.swift in Sources */,
+				99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
 				990198882BFA190100BFB37C /* PreferableEventsViewStateManager.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
 				99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */,
 				9901988A2BFA1E7400BFB37C /* GreetingViewStateManager.swift in Sources */,
 				99871C572BF72E7300F626A4 /* EditView.swift in Sources */,
-				991B73BB2BF9E5B600A10CD5 /* GreetingView.swift in Sources */,
 				991B73BD2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift in Sources */,
 				990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */,
 				99871C472BF71EE100F626A4 /* ContentView.swift in Sources */,
 				99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */,
-				990198942BFB719500BFB37C /* AddedTextField.swift in Sources */,
+				99F6B50F2C1070D8002E8CF4 /* TextViewWithButtonState.swift in Sources */,
+				990198942BFB719500BFB37C /* AddedText.swift in Sources */,
+				99F6B5122C107479002E8CF4 /* EmptyTextFieldState.swift in Sources */,
 				990198922BFB5B4400BFB37C /* Events.swift in Sources */,
 				99871C7D2BF79DBF00F626A4 /* DateCounter.swift in Sources */,
 				99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */,
@@ -360,7 +431,8 @@
 				99871C692BF75CB500F626A4 /* AddPreferableEventView.swift in Sources */,
 				99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */,
 				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
-				99871C662BF75B7300F626A4 /* AddOrRemoveButton.swift in Sources */,
+				99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */,
+				99871C662BF75B7300F626A4 /* AddOrRemoveButton2.swift in Sources */,
 				99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */,
 				990198982BFB85F300BFB37C /* MinusButton.swift in Sources */,
 			);

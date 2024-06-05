@@ -22,7 +22,7 @@ struct PreventiveWorkView: View {
                     AddedText(text: viewModel.schedule.preventiveWork!.description)
                 }
                 Spacer()
-                AddOrRemoveButton(isAddButtonState: $viewModel.preventiveWorkStateManager.isAddButtonState, 
+                AddOrRemoveButton2(isAddButtonState: $viewModel.preventiveWorkStateManager.isAddButtonState, 
                                   buttonTintColor: .buttonIsActive) {
                     viewModel.schedule.preventiveWork = viewModel.preventiveWorkStateManager.getPreventiveWorkScheduleItem()
                 } removeAction: {

@@ -19,5 +19,5 @@ struct AddedText: View {
 }
 
 #Preview {
-    AddedText(text: "Sex")
+    AddedText(text: "text")
 }

@@ -9,11 +9,13 @@ import Foundation
 
 class ViewModelFactory {
     
+    let scheduleController = ScheduleController()
+    
     func makeScheduleViewModel() -> ScheduleViewModel {
-        ScheduleViewModel()
+        ScheduleViewModel(scheduleController: scheduleController)
     }
     
     func makeEditViewModel() -> EditViewModel {
-        EditViewModel()
+        EditViewModel(scheduleController: scheduleController)
     }
 }

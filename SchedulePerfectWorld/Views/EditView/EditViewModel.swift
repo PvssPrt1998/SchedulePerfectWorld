@@ -7,6 +7,15 @@
 
 import Foundation
 
-class EditViewModel {
+class EditViewModel: ObservableObject {
     
+    var scheduleController: ScheduleController
+    
+    var greetingEditViewModel: GreetingViewModel
+    
+    init(scheduleController: ScheduleController) {
+        self.scheduleController = scheduleController
+        greetingEditViewModel = GreetingViewModel(scheduleController: scheduleController)
+        
+    }
 }

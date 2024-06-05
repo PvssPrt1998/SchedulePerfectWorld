@@ -1,49 +1,31 @@
 //
-//  MinusButton.swift
+//  AddOrRemoveButton1.swift
 //  SchedulePerfectWorld
 //
-//  Created by Николай Щербаков on 17.05.2024.
+//  Created by Николай Щербаков on 05.06.2024.
 //
 
 import SwiftUI
 
 struct AddOrRemoveButton: View {
     
-    @Binding var isAddButtonState: Bool
-    var buttonTintColor: Color
-    var buttonImageTitle: String {
-        if isAddButtonState {
-            "plus"
-        } else {
-            "minus"
-        }
-    }
-    
-    var addAction: () -> Void
-    var removeAction: () -> Void
+    var imageTitle: String
+    var imageTintColor: Color
+    var action: () -> Void
     
     var body: some View {
         Button {
-            if isAddButtonState {
-                addAction()
-                isAddButtonState.toggle()
-            } else {
-                removeAction()
-                isAddButtonState.toggle()
-            }
+            action()
         } label: {
-            Image(systemName: buttonImageTitle)
+            Image(systemName: imageTitle)
                 .scaledToFit()
-                .foregroundStyle(buttonTintColor)
+                .foregroundStyle(imageTintColor)
                 .frame(width: 16, height: 16)
                 .padding()
         }
     }
 }
 
-struct AddOrRemoveButton_Preview : PreviewProvider {
-    @State static var isAddState = true
-    static var previews: some View {
-        AddOrRemoveButton(isAddButtonState: $isAddState, buttonTintColor: .gray, addAction: {}, removeAction: {})
-    }
+#Preview {
+    AddOrRemoveButton(imageTitle: "plus", imageTintColor: .gray, action: {})
 }

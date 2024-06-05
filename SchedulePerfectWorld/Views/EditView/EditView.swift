@@ -13,8 +13,6 @@ struct EditView: View {
     
     var body: some View {
         ZStack {
-            Color.element
-                .ignoresSafeArea()
             VStack {
                 Toggle("Темная тема", isOn: $viewModel.colorSchemeStateManager.darkMode)
                 GreetingView()
