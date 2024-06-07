@@ -12,5 +12,5 @@ protocol GreetingViewContext: AnyObject {
     var buttonIsActive: Bool { get set }
     var buttonImageTitle: String { get set }
     
-    func transition(to state: TextViewWithButtonState)
+    func transition(to state: GreetingViewState)
 }

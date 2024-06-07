@@ -11,7 +11,7 @@ final class GreetingViewModel: ObservableObject, GreetingViewContext {
     
     private var scheduleController: ScheduleController
     
-    @Published var state: TextViewWithButtonState
+    @Published var state: GreetingViewState
     
     var text: String = "" {
         didSet {
@@ -59,7 +59,7 @@ final class GreetingViewModel: ObservableObject, GreetingViewContext {
 }
 
 extension GreetingViewModel {
-    func transition(to state: TextViewWithButtonState) {
+    func transition(to state: GreetingViewState) {
         self.state = state
         self.state.update(context: self)
     }

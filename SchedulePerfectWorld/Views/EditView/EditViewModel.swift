@@ -8,19 +8,16 @@
 import Foundation
 
 class EditViewModel: ObservableObject {
-//    
-//    var scheduleController: ScheduleController
-//    var colorSchemeController: ColorSchemeController
-//    
+    
     var greetingEditViewModel: GreetingViewModel
     var preventiveWorkViewModel: PreventiveWorkViewModel
+    var preferableEventViewModel: PreferableEventViewModel
     var colorSchemeViewModel: ColorSchemeViewModel
     
     init(scheduleController: ScheduleController, colorSchemeController: ColorSchemeController) {
-//        self.scheduleController = scheduleController
-//        self.colorSchemeController = colorSchemeController
         greetingEditViewModel = GreetingViewModel(scheduleController: scheduleController)
         preventiveWorkViewModel = PreventiveWorkViewModel(scheduleController: scheduleController)
+        preferableEventViewModel = PreferableEventViewModel(scheduleController: scheduleController)
         colorSchemeViewModel = ColorSchemeViewModel(colorSchemeController: colorSchemeController)
     }
 }

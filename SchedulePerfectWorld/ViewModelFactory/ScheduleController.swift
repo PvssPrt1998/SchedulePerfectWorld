@@ -43,4 +43,21 @@ final class ScheduleController: ObservableObject {
     func setPreventiveWork(text: String) {
         schedule.preventiveWork = ScheduleItem(description: text)
     }
+    
+    func isPreferableEventsNil() -> Bool {
+        schedule.preferableEvents == nil
+    }
+    
+    func isPreferableEventsNilOrEmpty() -> Bool {
+        schedule.preferableEvents == nil || schedule.preferableEvents == []
+    }
+    
+    func addPreferableEvent(text: String) {
+        if isPreferableEventsNil() { schedule.preferableEvents = [] }
+        schedule.preferableEvents?.append(ScheduleItem(description: text))
+    }
+    
+    func removePreferableEvent(text: String) {
+        schedule.preferableEvents?.removeAll(where: { $0.description == text })
+    }
 }

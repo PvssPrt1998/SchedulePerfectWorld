@@ -39,5 +39,4 @@ struct ScheduleView: View {
 
 #Preview {
     ScheduleView(viewModel: ScheduleViewModel(scheduleController: ScheduleController()))
-        .environmentObject(ViewModel())
 }

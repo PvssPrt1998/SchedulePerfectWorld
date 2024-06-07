@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol TextViewWithButtonState {
+protocol GreetingViewState {
     
     func update(context: GreetingViewContext)
     

@@ -16,9 +16,13 @@ struct EditView: View {
             Color.element
                 .ignoresSafeArea()
             VStack(spacing: 16) {
-                GreetingView(viewModel: viewModel.greetingEditViewModel)
-                PreventiveWorkView(viewModel: viewModel.preventiveWorkViewModel)
                 ColorSchemeView(viewModel: viewModel.colorSchemeViewModel)
+                Divider()
+                GreetingView(viewModel: viewModel.greetingEditViewModel)
+                Divider()
+                PreventiveWorkView(viewModel: viewModel.preventiveWorkViewModel)
+                Divider()
+                PreferableEventView(viewModel: viewModel.preferableEventViewModel)
                 Spacer()
             }
             .padding()

@@ -1,5 +1,4 @@
 //
-//  BaseButtonState.swift
 //  SchedulePerfectWorld
 //
 //  Created by Николай Щербаков on 05.06.2024.
@@ -7,7 +6,7 @@
 
 import SwiftUI
 
-class GreetingViewBaseState: TextViewWithButtonState {
+class GreetingViewBaseState: GreetingViewState {
     
     private(set) weak var context: GreetingViewContext?
     
