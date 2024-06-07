@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-final class EditFlowCoordinator: ObservableObject, Hashable {
+final class EditViewCoordinator: ObservableObject, Hashable {
 
     private var id: UUID
     
@@ -28,7 +28,7 @@ final class EditFlowCoordinator: ObservableObject, Hashable {
         hasher.combine(id)
     }
     
-    static func == (lhs: EditFlowCoordinator, rhs: EditFlowCoordinator) -> Bool {
+    static func == (lhs: EditViewCoordinator, rhs: EditViewCoordinator) -> Bool {
         return lhs.id == rhs.id
     }
 }
