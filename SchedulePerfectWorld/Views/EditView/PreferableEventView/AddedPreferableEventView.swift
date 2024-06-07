@@ -12,9 +12,9 @@ struct AddedPreferableEventView: View {
     
     var body: some View {
         VStack {
-            ForEach(viewModel.schedule.preferableEvents!, id: \.self) { item in
-                AddedPreferableEventRowView(preferableEvent: item)
-            }
+//            ForEach(viewModel.schedule.preferableEvents!, id: \.self) { item in
+//                AddedPreferableEventRowView(preferableEvent: item)
+//            }
         }
     }
 }

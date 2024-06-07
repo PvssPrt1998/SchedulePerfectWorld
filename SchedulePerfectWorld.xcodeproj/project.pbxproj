@@ -12,7 +12,6 @@
 		990198822BFA0A8A00BFB37C /* ClanHall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198812BFA0A8A00BFB37C /* ClanHall.swift */; };
 		990198842BFA0ACC00BFB37C /* EverydayDungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198832BFA0ACC00BFB37C /* EverydayDungeon.swift */; };
 		990198882BFA190100BFB37C /* PreferableEventsViewStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198872BFA190100BFB37C /* PreferableEventsViewStateManager.swift */; };
-		9901988A2BFA1E7400BFB37C /* GreetingViewStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198892BFA1E7400BFB37C /* GreetingViewStateManager.swift */; };
 		990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901988F2BFA2B2000BFB37C /* ScheduleView.swift */; };
 		990198922BFB5B4400BFB37C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198912BFB5B4400BFB37C /* Events.swift */; };
 		990198942BFB719500BFB37C /* AddedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198932BFB719500BFB37C /* AddedText.swift */; };
@@ -20,17 +19,13 @@
 		990198982BFB85F300BFB37C /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198972BFB85F300BFB37C /* MinusButton.swift */; };
 		9901989B2BFB916700BFB37C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901989A2BFB916700BFB37C /* Appearance.swift */; };
 		991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */; };
-		991B73BD2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73BC2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift */; };
 		99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */; };
 		99871C472BF71EE100F626A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C462BF71EE100F626A4 /* ContentView.swift */; };
 		99871C492BF71EE300F626A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99871C482BF71EE300F626A4 /* Assets.xcassets */; };
 		99871C4C2BF71EE300F626A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99871C4B2BF71EE300F626A4 /* Preview Assets.xcassets */; };
 		99871C532BF71FC100F626A4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C522BF71FC100F626A4 /* Model.swift */; };
 		99871C552BF7297C00F626A4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C542BF7297C00F626A4 /* ViewModel.swift */; };
-		99871C572BF72E7300F626A4 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C562BF72E7300F626A4 /* EditView.swift */; };
 		99871C592BF738FF00F626A4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C582BF738FF00F626A4 /* DatePickerView.swift */; };
-		99871C5D2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C5C2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift */; };
-		99871C622BF757A800F626A4 /* PreventiveWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C612BF757A800F626A4 /* PreventiveWorkView.swift */; };
 		99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C632BF7582200F626A4 /* PreferableEventView.swift */; };
 		99871C662BF75B7300F626A4 /* AddOrRemoveButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C652BF75B7300F626A4 /* AddOrRemoveButton2.swift */; };
 		99871C692BF75CB500F626A4 /* AddPreferableEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C682BF75CB500F626A4 /* AddPreferableEventView.swift */; };
@@ -47,16 +42,29 @@
 		99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */; };
 		99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */; };
 		99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */; };
-		99F6B5062C0F739D002E8CF4 /* EditView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5052C0F739D002E8CF4 /* EditView1.swift */; };
-		99F6B5082C0F7550002E8CF4 /* GreetingEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */; };
+		99F6B5062C0F739D002E8CF4 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5052C0F739D002E8CF4 /* EditView.swift */; };
+		99F6B5082C0F7550002E8CF4 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5072C0F7550002E8CF4 /* GreetingView.swift */; };
 		99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */; };
 		99F6B50F2C1070D8002E8CF4 /* TextViewWithButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */; };
 		99F6B5122C107479002E8CF4 /* EmptyTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5112C107479002E8CF4 /* EmptyTextFieldState.swift */; };
 		99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5132C10748E002E8CF4 /* TextFieldWithTextState.swift */; };
 		99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5152C1074A6002E8CF4 /* AddedTextState.swift */; };
-		99F6B5192C107652002E8CF4 /* BaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5182C107652002E8CF4 /* BaseState.swift */; };
+		99F6B5192C107652002E8CF4 /* GreetingViewBaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5182C107652002E8CF4 /* GreetingViewBaseState.swift */; };
 		99F6B51D2C109001002E8CF4 /* TextViewWithButtonContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */; };
 		99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */; };
+		99F6B5262C10B52B002E8CF4 /* PreventiveWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5252C10B52B002E8CF4 /* PreventiveWorkView.swift */; };
+		99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5272C10B539002E8CF4 /* PreventiveWorkViewModel.swift */; };
+		99F6B52B2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B52A2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift */; };
+		99F6B52D2C11FDF2002E8CF4 /* PreventiveViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B52C2C11FDF2002E8CF4 /* PreventiveViewState.swift */; };
+		99F6B52F2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B52E2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift */; };
+		99F6B5322C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5312C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift */; };
+		99F6B5342C11FFC1002E8CF4 /* PreventiveWorkNotAddedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5332C11FFC1002E8CF4 /* PreventiveWorkNotAddedState.swift */; };
+		99F6B5362C120048002E8CF4 /* CaptionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5352C120048002E8CF4 /* CaptionText.swift */; };
+		99F6B5382C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5372C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift */; };
+		99F6B53C2C120BD6002E8CF4 /* ColorSchemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B53B2C120BD6002E8CF4 /* ColorSchemeViewModel.swift */; };
+		99F6B5402C120BFC002E8CF4 /* ColorSchemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B53F2C120BFC002E8CF4 /* ColorSchemeView.swift */; };
+		99F6B5422C120D99002E8CF4 /* ColorSchemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5412C120D99002E8CF4 /* ColorSchemeController.swift */; };
+		99F6B5442C1306B2002E8CF4 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5432C1306B2002E8CF4 /* NavigationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +73,6 @@
 		990198812BFA0A8A00BFB37C /* ClanHall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanHall.swift; sourceTree = "<group>"; };
 		990198832BFA0ACC00BFB37C /* EverydayDungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydayDungeon.swift; sourceTree = "<group>"; };
 		990198872BFA190100BFB37C /* PreferableEventsViewStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventsViewStateManager.swift; sourceTree = "<group>"; };
-		990198892BFA1E7400BFB37C /* GreetingViewStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewStateManager.swift; sourceTree = "<group>"; };
 		9901988F2BFA2B2000BFB37C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		990198912BFB5B4400BFB37C /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		990198932BFB719500BFB37C /* AddedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedText.swift; sourceTree = "<group>"; };
@@ -73,7 +80,6 @@
 		990198972BFB85F300BFB37C /* MinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		9901989A2BFB916700BFB37C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithBorderView.swift; sourceTree = "<group>"; };
-		991B73BC2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeStateManager.swift; sourceTree = "<group>"; };
 		99871C412BF71EE100F626A4 /* SchedulePerfectWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulePerfectWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePerfectWorldApp.swift; sourceTree = "<group>"; };
 		99871C462BF71EE100F626A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,10 +87,7 @@
 		99871C4B2BF71EE300F626A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99871C522BF71FC100F626A4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		99871C542BF7297C00F626A4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		99871C562BF72E7300F626A4 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		99871C582BF738FF00F626A4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
-		99871C5C2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkViewStateManager.swift; sourceTree = "<group>"; };
-		99871C612BF757A800F626A4 /* PreventiveWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkView.swift; sourceTree = "<group>"; };
 		99871C632BF7582200F626A4 /* PreferableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventView.swift; sourceTree = "<group>"; };
 		99871C652BF75B7300F626A4 /* AddOrRemoveButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButton2.swift; sourceTree = "<group>"; };
 		99871C682BF75CB500F626A4 /* AddPreferableEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPreferableEventView.swift; sourceTree = "<group>"; };
@@ -101,16 +104,29 @@
 		99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewCoordinator.swift; sourceTree = "<group>"; };
 		99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowCoordinator.swift; sourceTree = "<group>"; };
 		99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
-		99F6B5052C0F739D002E8CF4 /* EditView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView1.swift; sourceTree = "<group>"; };
-		99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingEditView.swift; sourceTree = "<group>"; };
+		99F6B5052C0F739D002E8CF4 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		99F6B5072C0F7550002E8CF4 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
 		99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithButtonState.swift; sourceTree = "<group>"; };
 		99F6B5112C107479002E8CF4 /* EmptyTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTextFieldState.swift; sourceTree = "<group>"; };
 		99F6B5132C10748E002E8CF4 /* TextFieldWithTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTextState.swift; sourceTree = "<group>"; };
 		99F6B5152C1074A6002E8CF4 /* AddedTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedTextState.swift; sourceTree = "<group>"; };
-		99F6B5182C107652002E8CF4 /* BaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseState.swift; sourceTree = "<group>"; };
+		99F6B5182C107652002E8CF4 /* GreetingViewBaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewBaseState.swift; sourceTree = "<group>"; };
 		99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithButtonContext.swift; sourceTree = "<group>"; };
 		99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButton.swift; sourceTree = "<group>"; };
+		99F6B5252C10B52B002E8CF4 /* PreventiveWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkView.swift; sourceTree = "<group>"; };
+		99F6B5272C10B539002E8CF4 /* PreventiveWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkViewModel.swift; sourceTree = "<group>"; };
+		99F6B52A2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkViewContext.swift; sourceTree = "<group>"; };
+		99F6B52C2C11FDF2002E8CF4 /* PreventiveViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveViewState.swift; sourceTree = "<group>"; };
+		99F6B52E2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkBaseState.swift; sourceTree = "<group>"; };
+		99F6B5312C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkAddedState.swift; sourceTree = "<group>"; };
+		99F6B5332C11FFC1002E8CF4 /* PreventiveWorkNotAddedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventiveWorkNotAddedState.swift; sourceTree = "<group>"; };
+		99F6B5352C120048002E8CF4 /* CaptionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionText.swift; sourceTree = "<group>"; };
+		99F6B5372C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrRemoveButtonTitle.swift; sourceTree = "<group>"; };
+		99F6B53B2C120BD6002E8CF4 /* ColorSchemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeViewModel.swift; sourceTree = "<group>"; };
+		99F6B53F2C120BFC002E8CF4 /* ColorSchemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeView.swift; sourceTree = "<group>"; };
+		99F6B5412C120D99002E8CF4 /* ColorSchemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeController.swift; sourceTree = "<group>"; };
+		99F6B5432C1306B2002E8CF4 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +163,9 @@
 		990198992BFB88C800BFB37C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				99871C7E2BF7CC0800F626A4 /* ContentView */,
+				99871C462BF71EE100F626A4 /* ContentView.swift */,
+				99871C5A2BF7390400F626A4 /* Components */,
+				99871C7E2BF7CC0800F626A4 /* ScheduleView */,
 				99871C602BF7578E00F626A4 /* EditView */,
 			);
 			path = Views;
@@ -172,15 +190,14 @@
 		99871C432BF71EE100F626A4 /* SchedulePerfectWorld */ = {
 			isa = PBXGroup;
 			children = (
-				99F6B50B2C1070A8002E8CF4 /* ButtonState */,
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
 				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
+				990198992BFB88C800BFB37C /* Views */,
 				99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */,
 				99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */,
+				99F6B5412C120D99002E8CF4 /* ColorSchemeController.swift */,
 				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
-				990198992BFB88C800BFB37C /* Views */,
-				99871C5A2BF7390400F626A4 /* Components */,
 				990198702BFA01D300BFB37C /* Service */,
 				99871C6F2BF75EC200F626A4 /* Utils */,
 				99871C5B2BF742B300F626A4 /* ScheduleViewModel */,
@@ -208,6 +225,7 @@
 				990198932BFB719500BFB37C /* AddedText.swift */,
 				990198972BFB85F300BFB37C /* MinusButton.swift */,
 				99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */,
+				99F6B5352C120048002E8CF4 /* CaptionText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -216,10 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				99871C542BF7297C00F626A4 /* ViewModel.swift */,
-				990198892BFA1E7400BFB37C /* GreetingViewStateManager.swift */,
-				99871C5C2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift */,
 				990198872BFA190100BFB37C /* PreferableEventsViewStateManager.swift */,
-				991B73BC2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift */,
 			);
 			path = ScheduleViewModel;
 			sourceTree = "<group>";
@@ -227,12 +242,13 @@
 		99871C602BF7578E00F626A4 /* EditView */ = {
 			isa = PBXGroup;
 			children = (
-				99F6B5052C0F739D002E8CF4 /* EditView1.swift */,
+				99F6B5052C0F739D002E8CF4 /* EditView.swift */,
 				99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */,
-				99871C562BF72E7300F626A4 /* EditView.swift */,
+				99F6B5372C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift */,
 				99F6B5222C109A7B002E8CF4 /* GreetingView */,
-				99871C612BF757A800F626A4 /* PreventiveWorkView.swift */,
+				99F6B5232C10B497002E8CF4 /* PreventiveWorkView */,
 				99871C672BF75C6E00F626A4 /* PreferableEventView */,
+				99F6B5242C10B4C3002E8CF4 /* ColorSchemeView */,
 			);
 			path = EditView;
 			sourceTree = "<group>";
@@ -259,15 +275,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		99871C7E2BF7CC0800F626A4 /* ContentView */ = {
+		99871C7E2BF7CC0800F626A4 /* ScheduleView */ = {
 			isa = PBXGroup;
 			children = (
 				99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */,
-				99871C462BF71EE100F626A4 /* ContentView.swift */,
 				99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */,
 				9901988F2BFA2B2000BFB37C /* ScheduleView.swift */,
 			);
-			path = ContentView;
+			path = ScheduleView;
 			sourceTree = "<group>";
 		};
 		99F6B4F62C0F2FBE002E8CF4 /* Coordinator */ = {
@@ -275,27 +290,20 @@
 			children = (
 				99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */,
 				99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */,
+				99F6B5432C1306B2002E8CF4 /* NavigationRouter.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		99F6B50B2C1070A8002E8CF4 /* ButtonState */ = {
+		99F6B50B2C1070A8002E8CF4 /* GreetingViewState */ = {
 			isa = PBXGroup;
 			children = (
 				99F6B51C2C109001002E8CF4 /* TextViewWithButtonContext.swift */,
 				99F6B50E2C1070D8002E8CF4 /* TextViewWithButtonState.swift */,
-				99F6B5102C10745B002E8CF4 /* ButtonStates */,
-			);
-			path = ButtonState;
-			sourceTree = "<group>";
-		};
-		99F6B5102C10745B002E8CF4 /* ButtonStates */ = {
-			isa = PBXGroup;
-			children = (
-				99F6B5182C107652002E8CF4 /* BaseState.swift */,
+				99F6B5182C107652002E8CF4 /* GreetingViewBaseState.swift */,
 				99F6B5172C10763B002E8CF4 /* ConcreteButtonStates */,
 			);
-			path = ButtonStates;
+			path = GreetingViewState;
 			sourceTree = "<group>";
 		};
 		99F6B5172C10763B002E8CF4 /* ConcreteButtonStates */ = {
@@ -312,9 +320,49 @@
 			isa = PBXGroup;
 			children = (
 				99F6B5092C0F759D002E8CF4 /* GreetingViewModel.swift */,
-				99F6B5072C0F7550002E8CF4 /* GreetingEditView.swift */,
+				99F6B5072C0F7550002E8CF4 /* GreetingView.swift */,
+				99F6B50B2C1070A8002E8CF4 /* GreetingViewState */,
 			);
 			path = GreetingView;
+			sourceTree = "<group>";
+		};
+		99F6B5232C10B497002E8CF4 /* PreventiveWorkView */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5272C10B539002E8CF4 /* PreventiveWorkViewModel.swift */,
+				99F6B5252C10B52B002E8CF4 /* PreventiveWorkView.swift */,
+				99F6B5292C11FC83002E8CF4 /* PreventiveWorkViewState */,
+			);
+			path = PreventiveWorkView;
+			sourceTree = "<group>";
+		};
+		99F6B5242C10B4C3002E8CF4 /* ColorSchemeView */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B53B2C120BD6002E8CF4 /* ColorSchemeViewModel.swift */,
+				99F6B53F2C120BFC002E8CF4 /* ColorSchemeView.swift */,
+			);
+			path = ColorSchemeView;
+			sourceTree = "<group>";
+		};
+		99F6B5292C11FC83002E8CF4 /* PreventiveWorkViewState */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B52A2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift */,
+				99F6B52C2C11FDF2002E8CF4 /* PreventiveViewState.swift */,
+				99F6B52E2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift */,
+				99F6B5302C11FF8B002E8CF4 /* ConcreteStates */,
+			);
+			path = PreventiveWorkViewState;
+			sourceTree = "<group>";
+		};
+		99F6B5302C11FF8B002E8CF4 /* ConcreteStates */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5312C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift */,
+				99F6B5332C11FFC1002E8CF4 /* PreventiveWorkNotAddedState.swift */,
+			);
+			path = ConcreteStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,49 +435,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F6B52B2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift in Sources */,
 				99871C772BF76F4500F626A4 /* AddedPreferableEventRowView.swift in Sources */,
 				99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */,
 				99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */,
+				99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
 				99871C6B2BF75CC600F626A4 /* AddedPreferableEventView.swift in Sources */,
-				99F6B5062C0F739D002E8CF4 /* EditView1.swift in Sources */,
+				99F6B5062C0F739D002E8CF4 /* EditView.swift in Sources */,
 				990198722BFA01F800BFB37C /* ScheduleMaker.swift in Sources */,
 				99871C712BF75ED000F626A4 /* Color+Extension.swift in Sources */,
 				99871C592BF738FF00F626A4 /* DatePickerView.swift in Sources */,
-				99F6B5192C107652002E8CF4 /* BaseState.swift in Sources */,
+				99F6B5192C107652002E8CF4 /* GreetingViewBaseState.swift in Sources */,
 				99F6B51D2C109001002E8CF4 /* TextViewWithButtonContext.swift in Sources */,
 				99871C802BF7CC1B00F626A4 /* ScheduleRowView.swift in Sources */,
 				9901989B2BFB916700BFB37C /* Appearance.swift in Sources */,
-				99F6B5082C0F7550002E8CF4 /* GreetingEditView.swift in Sources */,
+				99F6B5082C0F7550002E8CF4 /* GreetingView.swift in Sources */,
 				99871C532BF71FC100F626A4 /* Model.swift in Sources */,
-				99871C622BF757A800F626A4 /* PreventiveWorkView.swift in Sources */,
+				99F6B5362C120048002E8CF4 /* CaptionText.swift in Sources */,
 				99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */,
+				99F6B52F2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift in Sources */,
+				99F6B5382C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift in Sources */,
 				990198822BFA0A8A00BFB37C /* ClanHall.swift in Sources */,
-				99871C5D2BF742CD00F626A4 /* PreventiveWorkViewStateManager.swift in Sources */,
+				99F6B5422C120D99002E8CF4 /* ColorSchemeController.swift in Sources */,
 				99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */,
+				99F6B5402C120BFC002E8CF4 /* ColorSchemeView.swift in Sources */,
 				990198962BFB853E00BFB37C /* PlusButton.swift in Sources */,
 				99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
 				990198882BFA190100BFB37C /* PreferableEventsViewStateManager.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
 				99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */,
-				9901988A2BFA1E7400BFB37C /* GreetingViewStateManager.swift in Sources */,
-				99871C572BF72E7300F626A4 /* EditView.swift in Sources */,
-				991B73BD2BF9EFA700A10CD5 /* ColorSchemeStateManager.swift in Sources */,
 				990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */,
 				99871C472BF71EE100F626A4 /* ContentView.swift in Sources */,
 				99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */,
 				99F6B50F2C1070D8002E8CF4 /* TextViewWithButtonState.swift in Sources */,
 				990198942BFB719500BFB37C /* AddedText.swift in Sources */,
 				99F6B5122C107479002E8CF4 /* EmptyTextFieldState.swift in Sources */,
+				99F6B52D2C11FDF2002E8CF4 /* PreventiveViewState.swift in Sources */,
 				990198922BFB5B4400BFB37C /* Events.swift in Sources */,
 				99871C7D2BF79DBF00F626A4 /* DateCounter.swift in Sources */,
+				99F6B5262C10B52B002E8CF4 /* PreventiveWorkView.swift in Sources */,
+				99F6B5322C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift in Sources */,
 				99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */,
 				99871C552BF7297C00F626A4 /* ViewModel.swift in Sources */,
+				99F6B53C2C120BD6002E8CF4 /* ColorSchemeViewModel.swift in Sources */,
 				99871C792BF78BBF00F626A4 /* RingedLinkedList.swift in Sources */,
+				99F6B5342C11FFC1002E8CF4 /* PreventiveWorkNotAddedState.swift in Sources */,
 				990198842BFA0ACC00BFB37C /* EverydayDungeon.swift in Sources */,
 				99871C692BF75CB500F626A4 /* AddPreferableEventView.swift in Sources */,
 				99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */,
+				99F6B5442C1306B2002E8CF4 /* NavigationRouter.swift in Sources */,
 				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
 				99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */,
 				99871C662BF75B7300F626A4 /* AddOrRemoveButton2.swift in Sources */,

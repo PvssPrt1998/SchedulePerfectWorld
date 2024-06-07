@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Context: AnyObject {
+protocol GreetingViewContext: AnyObject {
     var text: String { get set }
     var buttonIsActive: Bool { get set }
     var buttonImageTitle: String { get set }

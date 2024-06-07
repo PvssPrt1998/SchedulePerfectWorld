@@ -7,10 +7,10 @@
 
 import Foundation
 
-class AddedTextState: BaseState {
+class AddedTextState: GreetingViewBaseState {
     override func toRemovedTextState() {
         context?.buttonIsActive = false
-        context?.buttonImageTitle = "plus"
+        context?.buttonImageTitle = AddOrRemoveButtonTitle.plus.rawValue
         context?.text = ""
         context?.transition(to: EmptyTextFieldState())
     }

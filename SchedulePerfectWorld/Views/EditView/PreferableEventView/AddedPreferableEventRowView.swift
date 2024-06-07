@@ -18,7 +18,7 @@ struct AddedPreferableEventRowView: View {
             AddedText(text: preferableEvent.description)
             Spacer()
             MinusButton {
-                viewModel.schedule.preferableEvents!.removeAll(where: { $0 == preferableEvent })
+                //viewModel.schedule.preferableEvents!.removeAll(where: { $0 == preferableEvent })
             }
         }
     }

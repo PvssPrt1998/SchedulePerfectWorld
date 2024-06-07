@@ -13,17 +13,17 @@ struct AddPreferableEventView: View {
     
     var body: some View {
         HStack {
-            TextFieldWithBorderView(binding: $viewModel.preferableEventsStateManager.preferableEventText)
-            
-            PlusButton(buttonTintColor: viewModel.preferableEventsStateManager.buttonTintColor) {
-                if viewModel.schedule.preferableEvents == nil {
-                    viewModel.schedule.preferableEvents = [viewModel.preferableEventsStateManager.makeScheduleItem()]
-                } else {
-                    viewModel.schedule.preferableEvents!.append(viewModel.preferableEventsStateManager.makeScheduleItem())
-                }
-                viewModel.preferableEventsStateManager.preferableEventText = ""
-            }
-            .disabled(viewModel.preferableEventsStateManager.buttonDisabled)
+//            TextFieldWithBorderView(binding: $viewModel.preferableEventsStateManager.preferableEventText)
+//            
+//            PlusButton(buttonTintColor: viewModel.preferableEventsStateManager.buttonTintColor) {
+//                if viewModel.schedule.preferableEvents == nil {
+//                    viewModel.schedule.preferableEvents = [viewModel.preferableEventsStateManager.makeScheduleItem()]
+//                } else {
+//                    viewModel.schedule.preferableEvents!.append(viewModel.preferableEventsStateManager.makeScheduleItem())
+//                }
+//                viewModel.preferableEventsStateManager.preferableEventText = ""
+//            }
+//            .disabled(viewModel.preferableEventsStateManager.buttonDisabled)
         }
     }
 }

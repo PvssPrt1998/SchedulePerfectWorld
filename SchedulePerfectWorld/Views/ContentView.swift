@@ -9,13 +9,10 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    
-    @EnvironmentObject var viewModel: ViewModel
-    
-    @StateObject var scheduleViewCoordinator = ScheduleViewCoordinator(path: NavigationPath())
+
+    @ObservedObject var scheduleViewCoordinator: ScheduleViewCoordinator
     
     var body: some View {
-        
         NavigationStack(path: $scheduleViewCoordinator.path) {
             ZStack {
                 Color.element
@@ -25,15 +22,14 @@ struct ContentView: View {
                         coordinator.build()
                     }
             }
+            .preferredColorScheme(scheduleViewCoordinator.appColorScheme)
         }
-        //.environmentObject(scheduleViewCoordinator)
-        .environmentObject(viewModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(ViewModel())
+        ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(path: NavigationPath(), 
+                                                                     viewModelFactory: ViewModelFactory()))
     }
 }

@@ -20,13 +20,8 @@ final class EditFlowCoordinator: ObservableObject, Hashable {
     }
     
     @ViewBuilder func build() -> some View {
-        EditView1(viewModel: viewModelFactory.makeEditViewModel())
+        EditView(viewModel: viewModelFactory.makeEditViewModel())
     }
-    
-//    func editView() -> some View {
-//        let editView = EditView()
-//        return editView
-//    }
     
     // MARK: Required methods for class to conform to Hashable
     func hash(into hasher: inout Hasher) {

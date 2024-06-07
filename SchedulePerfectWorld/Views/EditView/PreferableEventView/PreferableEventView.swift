@@ -8,23 +8,11 @@
 import SwiftUI
 
 struct PreferableEventView: View {
-    
-    @EnvironmentObject var viewModel: ViewModel
-    
     var body: some View {
-        Toggle("Особое событие", isOn: $viewModel.preferableEventsStateManager.isPreferableEventOn)
-        if viewModel.preferableEventsStateManager.isPreferableEventOn {
-            if viewModel.schedule.preferableEvents != nil {
-                if !viewModel.schedule.preferableEvents!.isEmpty {
-                    AddedPreferableEventView()
-                }
-            }
-            AddPreferableEventView()
-        }
+        Text("PreferableEventText")
     }
 }
 
 #Preview {
     PreferableEventView()
-        .environmentObject(ViewModel())
 }

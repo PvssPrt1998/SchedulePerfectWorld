@@ -9,8 +9,12 @@ import Foundation
 import Combine
 
 final class ScheduleController: ObservableObject {
-    @Published var schedule: Schedule = ScheduleMaker().configureSchedule()
+    @Published var schedule: Schedule
     var defaultGreeting = "Доброе утро!"
+    
+    init() {
+        schedule = ScheduleMaker().configureSchedule()
+    }
     
     func getGreeting() -> String {
         schedule.greeting.description
@@ -20,7 +24,23 @@ final class ScheduleController: ObservableObject {
         schedule.greeting.description = greeting
     }
     
+    func isDefaultGreeting() -> Bool {
+        schedule.greeting.description == defaultGreeting
+    }
+    
     func resetGreetingToDefault() {
         schedule.greeting.description = defaultGreeting
+    }
+    
+    func isPreventiveWorkNil() -> Bool {
+        schedule.preventiveWork == nil
+    }
+    
+    func removePreventiveWork() {
+        schedule.preventiveWork = nil
+    }
+    
+    func setPreventiveWork(text: String) {
+        schedule.preventiveWork = ScheduleItem(description: text)
     }
 }

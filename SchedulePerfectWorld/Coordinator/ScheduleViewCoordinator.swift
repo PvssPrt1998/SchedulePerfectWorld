@@ -10,14 +10,20 @@ import Combine
 
 final class ScheduleViewCoordinator: ObservableObject {
     
-    var viewModelFactory = ViewModelFactory()
+    var viewModelFactory: ViewModelFactory
     
     @Published var path: NavigationPath
+    @Published var appColorScheme: ColorScheme?
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(path: NavigationPath) {
+    init(path: NavigationPath, viewModelFactory: ViewModelFactory) {
         self.path = path
+        self.viewModelFactory = viewModelFactory
+        viewModelFactory.colorSchemeController.$colorScheme.sink { [weak self] colorScheme in
+            self?.appColorScheme = colorScheme
+        }
+        .store(in: &cancellables)
     }
     
     private func push<T: Hashable>(_ coordinator: T) {
@@ -29,7 +35,7 @@ final class ScheduleViewCoordinator: ObservableObject {
     }
     
     private func scheduleView() -> some View {
-        let scheduleView = ScheduleView(viewModel1: viewModelFactory.makeScheduleViewModel())
+        let scheduleView = ScheduleView(viewModel: viewModelFactory.makeScheduleViewModel())
         bind(view: scheduleView)
         return scheduleView
     }

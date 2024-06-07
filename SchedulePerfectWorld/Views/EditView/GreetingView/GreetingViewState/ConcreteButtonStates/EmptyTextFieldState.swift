@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class EmptyTextFieldState: BaseState {
+class EmptyTextFieldState: GreetingViewBaseState {
     override func toEnteredTextState() {
         context?.buttonIsActive = true
         context?.transition(to: TextFieldWithTextState())

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-final class GreetingViewModel: ObservableObject, Context {
+final class GreetingViewModel: ObservableObject, GreetingViewContext {
     
-    var scheduleController: ScheduleController
+    private var scheduleController: ScheduleController
     
-    @Published var greetingViewState: TextViewWithButtonState
+    @Published var state: TextViewWithButtonState
     
     var text: String = "" {
         didSet {
@@ -19,7 +19,7 @@ final class GreetingViewModel: ObservableObject, Context {
         }
     }
     
-    var buttonImageTitle: String = "plus"
+    var buttonImageTitle: String = AddOrRemoveButtonTitle.plus.rawValue
     var buttonIsActive = false {
         didSet {
             buttonIsActive ? (buttonTintColor = .buttonIsActive) : (buttonTintColor = .gray)
@@ -30,14 +30,14 @@ final class GreetingViewModel: ObservableObject, Context {
     
     init(scheduleController: ScheduleController) {
         self.scheduleController = scheduleController
-        if scheduleController.getGreeting() == scheduleController.defaultGreeting {
-            greetingViewState = EmptyTextFieldState()
-            greetingViewState.update(context: self)
+        if scheduleController.isDefaultGreeting() {
+            state = EmptyTextFieldState()
+            state.update(context: self)
         } else {
             text = scheduleController.getGreeting()
-            greetingViewState = TextFieldWithTextState()
-            greetingViewState.update(context: self)
-            greetingViewState.toAddedTextState()
+            state = TextFieldWithTextState()
+            state.update(context: self)
+            state.toAddedTextState()
         }
     }
     
@@ -50,33 +50,34 @@ final class GreetingViewModel: ObservableObject, Context {
     }
     
     private func isAddedState() -> Bool {
-        greetingViewState is AddedTextState ? true : false
+        state is AddedTextState
     }
     
     private func textChanged() {
         text != "" ? toEnteredTextState() : toEmptyTextState()
     }
-    
-    //MARK: - View State Methods
+}
+
+extension GreetingViewModel {
     func transition(to state: TextViewWithButtonState) {
-        greetingViewState = state
-        greetingViewState.update(context: self)
+        self.state = state
+        self.state.update(context: self)
     }
     
     private func toEnteredTextState() {
-        greetingViewState.toEnteredTextState()
+        state.toEnteredTextState()
     }
     
     private func toEmptyTextState() {
-        greetingViewState.toEmptyTextState()
+        state.toEmptyTextState()
     }
     
     private func toAddedTextState() {
-        greetingViewState.toAddedTextState()
+        state.toAddedTextState()
         scheduleController.setGreeting(text)
     }
     private func toRemovedTextState() {
-        greetingViewState.toRemovedTextState()
+        state.toRemovedTextState()
         scheduleController.resetGreetingToDefault()
     }
 }

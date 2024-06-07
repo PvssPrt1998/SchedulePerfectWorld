@@ -9,7 +9,7 @@ import SwiftUI
 
 protocol TextViewWithButtonState {
     
-    func update(context: Context)
+    func update(context: GreetingViewContext)
     
     func toEnteredTextState()
     func toEmptyTextState()

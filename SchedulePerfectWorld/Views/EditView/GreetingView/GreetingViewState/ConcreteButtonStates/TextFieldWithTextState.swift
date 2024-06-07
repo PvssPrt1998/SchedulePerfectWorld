@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-class TextFieldWithTextState: BaseState {
+class TextFieldWithTextState: GreetingViewBaseState {
     override func toEmptyTextState() {
         context?.buttonIsActive = false
         context?.transition(to: EmptyTextFieldState())
     }
     
     override func toAddedTextState() {
-        context?.buttonImageTitle = "minus"
+        context?.buttonImageTitle = AddOrRemoveButtonTitle.minus.rawValue
         context?.buttonIsActive = true
         context?.transition(to: AddedTextState())
     }

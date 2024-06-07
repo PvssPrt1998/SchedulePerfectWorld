@@ -7,19 +7,13 @@
 
 import SwiftUI
 
-struct GreetingEditView: View {
+struct GreetingView: View {
     
     @ObservedObject var viewModel: GreetingViewModel
     
     var body: some View {
-        VStack(spacing: 4) {
-            HStack {
-                Text("Изменить приветствие")
-                    .font(.caption)
-                    .lineLimit(1)
-                    .foregroundStyle(.gray)
-                Spacer()
-            }
+        VStack(spacing: 2) {
+            CaptionText(text: "Изменить приветствие")
             HStack {
                 if viewModel.isEditableView() {
                     TextFieldWithBorderView(binding: $viewModel.text)
@@ -38,5 +32,5 @@ struct GreetingEditView: View {
 }
 
 #Preview {
-    GreetingEditView(viewModel: GreetingViewModel(scheduleController: ScheduleController()))
+    GreetingView(viewModel: GreetingViewModel(scheduleController: ScheduleController()))
 }

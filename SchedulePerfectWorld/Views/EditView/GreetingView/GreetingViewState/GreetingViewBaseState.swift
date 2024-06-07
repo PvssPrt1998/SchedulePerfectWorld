@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-class BaseState: TextViewWithButtonState {
+class GreetingViewBaseState: TextViewWithButtonState {
     
-    private(set) weak var context: Context?
+    private(set) weak var context: GreetingViewContext?
     
-    func update(context: Context) {
+    func update(context: GreetingViewContext) {
         self.context = context
     }
     
