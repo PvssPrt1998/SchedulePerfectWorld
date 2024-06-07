@@ -14,8 +14,6 @@
 		990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901988F2BFA2B2000BFB37C /* ScheduleView.swift */; };
 		990198922BFB5B4400BFB37C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198912BFB5B4400BFB37C /* Events.swift */; };
 		990198942BFB719500BFB37C /* AddedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198932BFB719500BFB37C /* AddedText.swift */; };
-		990198962BFB853E00BFB37C /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198952BFB853E00BFB37C /* PlusButton.swift */; };
-		990198982BFB85F300BFB37C /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990198972BFB85F300BFB37C /* MinusButton.swift */; };
 		9901989B2BFB916700BFB37C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901989A2BFB916700BFB37C /* Appearance.swift */; };
 		991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */; };
 		99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */; };
@@ -75,8 +73,6 @@
 		9901988F2BFA2B2000BFB37C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		990198912BFB5B4400BFB37C /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		990198932BFB719500BFB37C /* AddedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedText.swift; sourceTree = "<group>"; };
-		990198952BFB853E00BFB37C /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
-		990198972BFB85F300BFB37C /* MinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		9901989A2BFB916700BFB37C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithBorderView.swift; sourceTree = "<group>"; };
 		99871C412BF71EE100F626A4 /* SchedulePerfectWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulePerfectWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,11 +211,9 @@
 		99871C5A2BF7390400F626A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				990198952BFB853E00BFB37C /* PlusButton.swift */,
 				99871C582BF738FF00F626A4 /* DatePickerView.swift */,
 				991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */,
 				990198932BFB719500BFB37C /* AddedText.swift */,
-				990198972BFB85F300BFB37C /* MinusButton.swift */,
 				99F6B5202C109997002E8CF4 /* AddOrRemoveButton.swift */,
 				99F6B5352C120048002E8CF4 /* CaptionText.swift */,
 			);
@@ -483,7 +477,6 @@
 				99F6B5422C120D99002E8CF4 /* ColorSchemeController.swift in Sources */,
 				99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */,
 				99F6B5402C120BFC002E8CF4 /* ColorSchemeView.swift in Sources */,
-				990198962BFB853E00BFB37C /* PlusButton.swift in Sources */,
 				99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
@@ -514,7 +507,6 @@
 				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
 				99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */,
 				99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */,
-				990198982BFB85F300BFB37C /* MinusButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

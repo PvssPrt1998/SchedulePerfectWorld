@@ -15,7 +15,7 @@ final class GreetingViewModel: ObservableObject, GreetingViewContext {
     
     var text: String = "" {
         didSet {
-            textChanged()
+            textChanged(oldValue: oldValue, currentValue: text)
         }
     }
     
@@ -53,8 +53,13 @@ final class GreetingViewModel: ObservableObject, GreetingViewContext {
         state is AddedTextState
     }
     
-    private func textChanged() {
-        text != "" ? toEnteredTextState() : toEmptyTextState()
+    private func textChanged(oldValue: String, currentValue: String) {
+        if text == "" && oldValue != "" {
+            toEmptyTextState()
+        }
+        if text != "" && oldValue == "" {
+            toEnteredTextState()
+        }
     }
 }
 
