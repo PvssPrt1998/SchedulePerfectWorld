@@ -15,7 +15,8 @@ struct PreferableEventView: View {
         VStack {
             CaptionText(text: "Особые события")
             HStack {
-                TextFieldWithBorderView(binding: $viewModel.text)
+                TextFieldWithBorderView(binding: $viewModel.text,
+                                        submitAction: viewModel.addButtonAction)
                 Spacer()
                 AddOrRemoveButton(imageTitle: "plus",
                                   imageTintColor: viewModel.tintColor,

@@ -16,7 +16,8 @@ struct GreetingView: View {
             CaptionText(text: "Изменить приветствие")
             HStack {
                 if viewModel.isEditableView() {
-                    TextFieldWithBorderView(binding: $viewModel.text)
+                    TextFieldWithBorderView(binding: $viewModel.text,
+                                            submitAction: viewModel.buttonAction)
                 } else {
                     AddedText(text: viewModel.text)
                 }

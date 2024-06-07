@@ -139,6 +139,7 @@
 		990198702BFA01D300BFB37C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				990198712BFA01F800BFB37C /* ScheduleMaker.swift */,
 				990198912BFB5B4400BFB37C /* Events.swift */,
 				990198732BFA021800BFB37C /* WeekdayEnum.swift */,
@@ -191,7 +192,6 @@
 				99F6B5452C1321FE002E8CF4 /* ViewModelFactory */,
 				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				990198992BFB88C800BFB37C /* Views */,
-				99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */,
 				990198702BFA01D300BFB37C /* Service */,
 				99871C6F2BF75EC200F626A4 /* Utils */,
 				99871C482BF71EE300F626A4 /* Assets.xcassets */,

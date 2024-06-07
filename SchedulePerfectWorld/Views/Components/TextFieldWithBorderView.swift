@@ -10,9 +10,12 @@ import SwiftUI
 struct TextFieldWithBorderView: View {
     
     var binding: Binding<String>
+    var submitAction: () -> Void
     
     var body: some View {
         TextField("", text: binding)
+            .submitLabel(.done)
+            .onSubmit(submitAction)
             .tint(.gray)
             .padding(.horizontal, 9)
             .padding(.vertical, 8)
@@ -33,7 +36,7 @@ struct TextFieldWithBorderView: View {
 struct TextFieldWithBorder_Preview : PreviewProvider {
     @State static var text = ""
     static var previews: some View {
-        TextFieldWithBorderView(binding: $text)
+        TextFieldWithBorderView(binding: $text, submitAction: {})
     }
 }
 
