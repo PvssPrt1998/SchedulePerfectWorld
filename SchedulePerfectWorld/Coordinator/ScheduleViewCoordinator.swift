@@ -12,22 +12,23 @@ final class ScheduleViewCoordinator: ObservableObject {
     
     var viewModelFactory: ViewModelFactory
     
-    @Published var path: NavigationPath
+    @Published var router: NavigationRouter
     @Published var appColorScheme: ColorScheme?
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(path: NavigationPath, viewModelFactory: ViewModelFactory) {
-        self.path = path
+    init(router: NavigationRouter, viewModelFactory: ViewModelFactory) {
+        self.router = router
         self.viewModelFactory = viewModelFactory
         viewModelFactory.colorSchemeController.$colorScheme.sink { [weak self] colorScheme in
             self?.appColorScheme = colorScheme
         }
         .store(in: &cancellables)
-    }
-    
-    private func push<T: Hashable>(_ coordinator: T) {
-        path.append(coordinator)
+        
+        self.router.objectWillChange.sink { [weak self] _ in
+            self?.objectWillChange.send()
+        }
+        .store(in: &cancellables)
     }
     
     @ViewBuilder func build() -> some View {
@@ -53,7 +54,7 @@ final class ScheduleViewCoordinator: ObservableObject {
     }
     
     private func makeEditViewCoordinator() {
-        self.push(EditFlowCoordinator(viewModelFactory: viewModelFactory))
+        router.push(EditViewCoordinator(viewModelFactory: viewModelFactory))
     }
 }
 

@@ -13,12 +13,12 @@ struct ContentView: View {
     @ObservedObject var scheduleViewCoordinator: ScheduleViewCoordinator
     
     var body: some View {
-        NavigationStack(path: $scheduleViewCoordinator.path) {
+        NavigationStack(path: $scheduleViewCoordinator.router.path) {
             ZStack {
                 Color.element
                     .ignoresSafeArea()
                 scheduleViewCoordinator.build()
-                    .navigationDestination(for: EditFlowCoordinator.self) { coordinator in
+                    .navigationDestination(for: EditViewCoordinator.self) { coordinator in
                         coordinator.build()
                     }
             }
@@ -29,7 +29,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(path: NavigationPath(), 
+        ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(router: NavigationRouter(path: NavigationPath()), 
                                                                      viewModelFactory: ViewModelFactory()))
     }
 }

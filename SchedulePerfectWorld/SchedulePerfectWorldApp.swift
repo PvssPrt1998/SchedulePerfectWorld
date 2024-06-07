@@ -11,7 +11,8 @@ import SwiftUI
 struct SchedulePerfectWorldApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(path: NavigationPath(), viewModelFactory: ViewModelFactory()))
+            ContentView(scheduleViewCoordinator: ScheduleViewCoordinator(router: NavigationRouter(path: NavigationPath()),
+                                                                         viewModelFactory: ViewModelFactory()))
         }
     }
 }

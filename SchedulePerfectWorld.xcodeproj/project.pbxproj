@@ -40,7 +40,7 @@
 		99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */; };
 		99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */; };
 		99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */; };
-		99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */; };
+		99F6B4FA2C0F2FE5002E8CF4 /* EditViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F92C0F2FE5002E8CF4 /* EditViewCoordinator.swift */; };
 		99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */; };
 		99F6B5062C0F739D002E8CF4 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5052C0F739D002E8CF4 /* EditView.swift */; };
 		99F6B5082C0F7550002E8CF4 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5072C0F7550002E8CF4 /* GreetingView.swift */; };
@@ -102,7 +102,7 @@
 		99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewCoordinator.swift; sourceTree = "<group>"; };
-		99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowCoordinator.swift; sourceTree = "<group>"; };
+		99F6B4F92C0F2FE5002E8CF4 /* EditViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewCoordinator.swift; sourceTree = "<group>"; };
 		99F6B5032C0F6D8C002E8CF4 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		99F6B5052C0F739D002E8CF4 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		99F6B5072C0F7550002E8CF4 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -289,7 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				99F6B4F72C0F2FDA002E8CF4 /* ScheduleViewCoordinator.swift */,
-				99F6B4F92C0F2FE5002E8CF4 /* EditFlowCoordinator.swift */,
+				99F6B4F92C0F2FE5002E8CF4 /* EditViewCoordinator.swift */,
 				99F6B5432C1306B2002E8CF4 /* NavigationRouter.swift */,
 			);
 			path = Coordinator;
@@ -438,7 +438,7 @@
 				99F6B52B2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift in Sources */,
 				99871C772BF76F4500F626A4 /* AddedPreferableEventRowView.swift in Sources */,
 				99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */,
-				99F6B4FA2C0F2FE5002E8CF4 /* EditFlowCoordinator.swift in Sources */,
+				99F6B4FA2C0F2FE5002E8CF4 /* EditViewCoordinator.swift in Sources */,
 				99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
 				99871C6B2BF75CC600F626A4 /* AddedPreferableEventView.swift in Sources */,

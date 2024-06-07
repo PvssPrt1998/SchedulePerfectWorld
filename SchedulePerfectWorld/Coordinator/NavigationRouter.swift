@@ -7,6 +7,14 @@
 
 import SwiftUI
 
-final class NavigationRouter {
-    var path: NavigationPath = NavigationPath()
+final class NavigationRouter: ObservableObject {
+    @Published var path: NavigationPath
+    
+    init(path: NavigationPath) {
+        self.path = path
+    }
+    
+    func push<T: Hashable>(_ coordinator: T) {
+        path.append(coordinator)
+    }
 }
