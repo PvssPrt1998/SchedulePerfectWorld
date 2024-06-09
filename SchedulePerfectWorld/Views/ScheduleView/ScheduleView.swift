@@ -15,25 +15,28 @@ struct ScheduleView: View {
     var viewModel: ScheduleViewModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            ForEach(viewModel.scheduleItemArray, id: \.self) { item in
-                ScheduleRow(scheduleItem: item)
+        ScrollView {
+            LazyVStack(alignment: .leading, spacing: 10) {
+                ForEach(viewModel.scheduleItemArray, id: \.self) { item in
+                    ScheduleRow(scheduleItem: item)
+                }
+            }
+            .padding()
+            .background(
+                Color.element
+            )
+            .clipShape(.rect(cornerRadius: 8))
+            .northWestShadow()
+            .padding(15)
+            .toolbar {
+                Button {
+                    didClickEditButton.send(true)
+                } label: {
+                    Text("Edit")
+                }
             }
         }
-        .padding()
-        .background(
-            Color.element
-        )
-        .clipShape(.rect(cornerRadius: 8))
-        .northWestShadow()
-        .padding(15)
-        .toolbar {
-            Button {
-                didClickEditButton.send(true)
-            } label: {
-                Text("Edit")
-            }
-        }
+        .scrollBounceBehavior(.basedOnSize)
     }
 }
 

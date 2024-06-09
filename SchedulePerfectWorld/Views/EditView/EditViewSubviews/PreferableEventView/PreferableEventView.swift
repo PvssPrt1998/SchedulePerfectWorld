@@ -23,20 +23,28 @@ struct PreferableEventView: View {
                 .disabled(viewModel.isAddButtonDisabled)
             }
             if !viewModel.isPreferableEventsNilOrEmpty() {
-                VStack(spacing: 2) {
-                    ForEach(viewModel.getEventsArray(), id: \.self) { item in
-                        HStack {
-                            AddedText(text: item.description)
-                            Spacer()
-                            AddOrRemoveButton(imageTitle: "minus", 
-                                              imageTintColor: .buttonIsActive) {
-                                viewModel.removeButtonAction(text: item.description)
+                ScrollView {
+                    LazyVStack(spacing: 2) {
+                        ForEach(viewModel.preferableEventsArray, id: \.self) { item in
+                            VStack {
+                                HStack {
+                                    AddedText(text: item.description)
+                                    Spacer()
+                                    AddOrRemoveButton(imageTitle: "minus", 
+                                                      imageTintColor: .buttonIsActive) {
+                                        viewModel.removeButtonAction(text: item.description)
+                                    }
+                                }
+                                if item != viewModel.preferableEventsArray.last && viewModel.preferableEventsArray.count != 1 {
+                                    Divider()
+                                }
                             }
                         }
                     }
-                }
-                .background(Color.white)
+                    .background(Color.white)
                 .clipShape(.rect(cornerRadius: 8))
+                }
+                .scrollBounceBehavior(.basedOnSize)
             }
         }
     }

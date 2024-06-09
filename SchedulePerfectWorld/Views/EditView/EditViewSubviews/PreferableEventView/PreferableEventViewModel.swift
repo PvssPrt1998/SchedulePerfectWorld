@@ -24,6 +24,7 @@ final class PreferableEventViewModel: ObservableObject, PreferableEventContext {
         }
     }
     var tintColor: Color = .gray
+    var preferableEventsArray: [ScheduleItem] = []
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -35,6 +36,7 @@ final class PreferableEventViewModel: ObservableObject, PreferableEventContext {
             self?.objectWillChange.send()
         }
         .store(in: &cancellables)
+        preferableEventsArray = getEventsArray()
     }
     
     private func textChanged(oldValue: String, currentValue: String) {
@@ -48,11 +50,13 @@ final class PreferableEventViewModel: ObservableObject, PreferableEventContext {
     
     func addButtonAction() {
         scheduleController.addPreferableEvent(text: text)
+        preferableEventsArray = getEventsArray()
         toEmptyTextState()
     }
     
     func removeButtonAction(text: String) {
         scheduleController.removePreferableEvent(text: text)
+        preferableEventsArray = getEventsArray()
     }
     
     func getEventsArray() -> [ScheduleItem] {
