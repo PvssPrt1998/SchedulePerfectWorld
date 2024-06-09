@@ -63,6 +63,12 @@
 		99F6B54F2C1330AA002E8CF4 /* PreferableEventViewBaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B54E2C1330AA002E8CF4 /* PreferableEventViewBaseState.swift */; };
 		99F6B5522C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5512C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift */; };
 		99F6B5542C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5532C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift */; };
+		99F6B55C2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B55A2C1608D5002E8CF4 /* PreferableEventsStorage.xcdatamodeld */; };
+		99F6B5632C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5612C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift */; };
+		99F6B5642C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5622C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift */; };
+		99F6B5662C160B66002E8CF4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5652C160B66002E8CF4 /* CoreDataStack.swift */; };
+		99F6B5682C160B8F002E8CF4 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5672C160B8F002E8CF4 /* LocalStorage.swift */; };
+		99F6B56A2C161085002E8CF4 /* ThrowErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5692C161085002E8CF4 /* ThrowErrorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +129,12 @@
 		99F6B54E2C1330AA002E8CF4 /* PreferableEventViewBaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventViewBaseState.swift; sourceTree = "<group>"; };
 		99F6B5512C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventViewWithTextState.swift; sourceTree = "<group>"; };
 		99F6B5532C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventViewEmptyTextState.swift; sourceTree = "<group>"; };
+		99F6B55B2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PreferableEventsStorage.xcdatamodel; sourceTree = "<group>"; };
+		99F6B5612C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferableEvents+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99F6B5622C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferableEvents+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99F6B5652C160B66002E8CF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		99F6B5672C160B8F002E8CF4 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		99F6B5692C161085002E8CF4 /* ThrowErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowErrorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +207,7 @@
 				990198702BFA01D300BFB37C /* Service */,
 				99871C6F2BF75EC200F626A4 /* Utils */,
 				99871C482BF71EE300F626A4 /* Assets.xcassets */,
+				99F6B5592C1608AB002E8CF4 /* Storage */,
 				99871C4A2BF71EE300F626A4 /* Preview Content */,
 			);
 			path = SchedulePerfectWorld;
@@ -383,6 +396,19 @@
 			path = ConcreteStates;
 			sourceTree = "<group>";
 		};
+		99F6B5592C1608AB002E8CF4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5692C161085002E8CF4 /* ThrowErrorHelper.swift */,
+				99F6B5652C160B66002E8CF4 /* CoreDataStack.swift */,
+				99F6B5672C160B8F002E8CF4 /* LocalStorage.swift */,
+				99F6B5612C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift */,
+				99F6B5622C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift */,
+				99F6B55A2C1608D5002E8CF4 /* PreferableEventsStorage.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +481,7 @@
 			files = (
 				99F6B52B2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift in Sources */,
 				99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */,
+				99F6B55C2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodeld in Sources */,
 				99F6B4FA2C0F2FE5002E8CF4 /* EditViewCoordinator.swift in Sources */,
 				99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
@@ -472,14 +499,18 @@
 				99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */,
 				99F6B52F2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift in Sources */,
 				99F6B5382C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift in Sources */,
+				99F6B5632C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift in Sources */,
+				99F6B5642C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift in Sources */,
 				99F6B5522C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift in Sources */,
 				990198822BFA0A8A00BFB37C /* ClanHall.swift in Sources */,
 				99F6B5422C120D99002E8CF4 /* ColorSchemeController.swift in Sources */,
 				99F6B5162C1074A6002E8CF4 /* AddedTextState.swift in Sources */,
+				99F6B5682C160B8F002E8CF4 /* LocalStorage.swift in Sources */,
 				99F6B5402C120BFC002E8CF4 /* ColorSchemeView.swift in Sources */,
 				99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
+				99F6B56A2C161085002E8CF4 /* ThrowErrorHelper.swift in Sources */,
 				99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */,
 				990198902BFA2B2000BFB37C /* ScheduleView.swift in Sources */,
 				99871C472BF71EE100F626A4 /* ContentView.swift in Sources */,
@@ -507,6 +538,7 @@
 				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
 				99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */,
 				99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */,
+				99F6B5662C160B66002E8CF4 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +744,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99F6B55A2C1608D5002E8CF4 /* PreferableEventsStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99F6B55B2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodel */,
+			);
+			currentVersion = 99F6B55B2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodel */;
+			name = PreferableEventsStorage.xcdatamodeld;
+			path = /Users/lucifer/Documents/SwiftProjects/SchedulePerfectWorld/SchedulePerfectWorld/Storage/PreferableEventsStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 99871C392BF71EE100F626A4 /* Project object */;
 }

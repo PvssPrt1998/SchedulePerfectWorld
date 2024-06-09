@@ -11,9 +11,11 @@ import Combine
 final class ScheduleController: ObservableObject {
     @Published var schedule: Schedule
     var defaultGreeting = "Доброе утро!"
+    var localStorage = LocalStorage()
     
     init() {
         schedule = ScheduleMaker().configureSchedule()
+        schedule.preferableEvents = try? localStorage.getPreferableEventsArray().map({ScheduleItem(description: $0)})
     }
     
     func getGreeting() -> String {
@@ -55,9 +57,11 @@ final class ScheduleController: ObservableObject {
     func addPreferableEvent(text: String) {
         if isPreferableEventsNil() { schedule.preferableEvents = [] }
         schedule.preferableEvents?.append(ScheduleItem(description: text))
+        localStorage.addPreferableEvent(desctiption: text)
     }
     
     func removePreferableEvent(text: String) {
         schedule.preferableEvents?.removeAll(where: { $0.description == text })
+        try? localStorage.removePreferableEvent(by: text)
     }
 }
