@@ -13,8 +13,8 @@ final class PreventiveWorkViewModel: ObservableObject, PreventiveWorkViewContext
     var buttonImageTitle: String = AddOrRemoveButtonTitle.plus.rawValue
     var buttonTingColor: Color = .buttonIsActive
     
-    var beginTime: Date = Date(timeIntervalSince1970: 0)
-    var endTime: Date = Date(timeIntervalSince1970: 0)
+    var beginTime: Date = Date(timeIntervalSince1970: -(5 * 60 * 60))
+    var endTime: Date = Date(timeIntervalSince1970: -(5 * 60 * 60))
     
     private var scheduleController: ScheduleController
     
