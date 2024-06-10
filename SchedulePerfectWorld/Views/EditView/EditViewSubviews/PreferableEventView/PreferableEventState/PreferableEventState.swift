@@ -13,4 +13,5 @@ protocol PreferableEventViewState {
     
     func toEnteredTextState()
     func toEmptyTextState()
+    func toEventAlreadyExistErrorState()
 }

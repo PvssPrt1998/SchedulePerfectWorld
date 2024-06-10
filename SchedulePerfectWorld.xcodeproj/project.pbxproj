@@ -69,6 +69,7 @@
 		99F6B5662C160B66002E8CF4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5652C160B66002E8CF4 /* CoreDataStack.swift */; };
 		99F6B5682C160B8F002E8CF4 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5672C160B8F002E8CF4 /* LocalStorage.swift */; };
 		99F6B56A2C161085002E8CF4 /* ThrowErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5692C161085002E8CF4 /* ThrowErrorHelper.swift */; };
+		99F6B56C2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B56B2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		99F6B5652C160B66002E8CF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		99F6B5672C160B8F002E8CF4 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		99F6B5692C161085002E8CF4 /* ThrowErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowErrorHelper.swift; sourceTree = "<group>"; };
+		99F6B56B2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventViewTextAlreadyExistErrorState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 			children = (
 				99F6B5512C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift */,
 				99F6B5532C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift */,
+				99F6B56B2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift */,
 			);
 			path = ConcreteStates;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				99F6B54B2C133037002E8CF4 /* PreferableEventContext.swift in Sources */,
 				99F6B5262C10B52B002E8CF4 /* PreventiveWorkView.swift in Sources */,
 				99F6B5322C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift in Sources */,
+				99F6B56C2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift in Sources */,
 				99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */,
 				99F6B54F2C1330AA002E8CF4 /* PreferableEventViewBaseState.swift in Sources */,
 				99F6B5542C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift in Sources */,

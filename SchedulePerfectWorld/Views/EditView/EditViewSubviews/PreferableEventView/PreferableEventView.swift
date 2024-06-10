@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct PreferableEventView: View {
-    
+
     @ObservedObject var viewModel: PreferableEventViewModel
     
     var body: some View {
         VStack {
-            CaptionText(text: "Особые события")
-            HStack {
-                TextFieldWithBorderView(binding: $viewModel.text)
-                Spacer()
-                AddOrRemoveButton(imageTitle: "plus",
-                                  imageTintColor: viewModel.tintColor,
-                                  action: viewModel.addButtonAction)
-                .disabled(viewModel.isAddButtonDisabled)
+            VStack(spacing: 2) {
+                HStack {
+                    if viewModel.showErrorCaption {
+                        CaptionText(text: "Событие уже существует", color: .red)
+                    } else {
+                        CaptionText(text: "Особые события")
+                    }
+                    Spacer()
+                }
+                HStack {
+                    TextFieldWithBorderView(binding: $viewModel.text, borderColor: viewModel.textFieldBorderColor)
+                    Spacer()
+                    AddOrRemoveButton(imageTitle: "plus",
+                                      imageTintColor: viewModel.tintColor,
+                                      action: viewModel.addButtonAction)
+                    .disabled(viewModel.isAddButtonDisabled)
+                }
             }
             if !viewModel.isPreferableEventsNilOrEmpty() {
                 ScrollView {

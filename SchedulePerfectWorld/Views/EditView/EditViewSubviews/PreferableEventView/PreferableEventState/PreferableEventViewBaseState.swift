@@ -17,5 +17,6 @@ class PreferableEventViewBaseState: PreferableEventViewState {
     
     func toEnteredTextState() { }
     func toEmptyTextState() { }
+    func toEventAlreadyExistErrorState() { }
 }
 

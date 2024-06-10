@@ -25,6 +25,8 @@ final class PreferableEventViewModel: ObservableObject, PreferableEventContext {
     }
     var tintColor: Color = .gray
     var preferableEventsArray: [ScheduleItem] = []
+    var textFieldBorderColor: Color?
+    var showErrorCaption: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -46,12 +48,25 @@ final class PreferableEventViewModel: ObservableObject, PreferableEventContext {
         if text != "" && oldValue == "" {
             toEnteredTextState()
         }
+        
+        if oldValue != "" && isErrorState() {
+            if text == "" {
+                toEmptyTextState()
+            }
+            if text != "" {
+                toEnteredTextState()
+            }
+        }
     }
     
     func addButtonAction() {
-        scheduleController.addPreferableEvent(text: text)
-        preferableEventsArray = getEventsArray()
-        toEmptyTextState()
+        if scheduleController.isPreferableEventAlreadyExist(text: text) {
+            toEventAlreadyExistErrorState()
+        } else {
+            scheduleController.addPreferableEvent(text: text)
+            preferableEventsArray = getEventsArray()
+            toEmptyTextState()
+        }
     }
     
     func removeButtonAction(text: String) {
@@ -84,5 +99,13 @@ extension PreferableEventViewModel {
     
     func toEnteredTextState() {
         state.toEnteredTextState()
+    }
+    
+    func toEventAlreadyExistErrorState() {
+        state.toEventAlreadyExistErrorState()
+    }
+    
+    func isErrorState() -> Bool {
+        state is PreferableEventViewTextAlreadyExistErrorState
     }
 }

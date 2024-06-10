@@ -54,6 +54,13 @@ final class ScheduleController: ObservableObject {
         schedule.preferableEvents == nil || schedule.preferableEvents == []
     }
     
+    func isPreferableEventAlreadyExist(text: String) -> Bool {
+        if !isPreferableEventsNil() {
+            return schedule.preferableEvents!.contains(where: { $0.description == text })
+        }
+        return false
+    }
+    
     func addPreferableEvent(text: String) {
         if isPreferableEventsNil() { schedule.preferableEvents = [] }
         schedule.preferableEvents?.append(ScheduleItem(description: text))
