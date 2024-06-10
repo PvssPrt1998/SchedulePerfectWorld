@@ -19,6 +19,7 @@ struct ScheduleRow: View {
                     .frame(width: 32, height: 32)
             }
             Text(scheduleItem.description)
+            Spacer()
         }
     }
 }

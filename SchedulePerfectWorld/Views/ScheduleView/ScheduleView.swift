@@ -15,28 +15,26 @@ struct ScheduleView: View {
     var viewModel: ScheduleViewModel
     
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical) {
             LazyVStack(alignment: .leading, spacing: 10) {
                 ForEach(viewModel.scheduleItemArray, id: \.self) { item in
                     ScheduleRow(scheduleItem: item)
                 }
             }
             .padding()
-            .background(
-                Color.element
-            )
+            .background(Color.element)
             .clipShape(.rect(cornerRadius: 8))
             .northWestShadow()
-            .padding(15)
-            .toolbar {
-                Button {
-                    didClickEditButton.send(true)
-                } label: {
-                    Text("Edit")
-                }
-            }
+            .padding(20)
         }
         .scrollBounceBehavior(.basedOnSize)
+        .toolbar {
+            Button {
+                didClickEditButton.send(true)
+            } label: {
+                Text("Edit")
+            }
+        }
     }
 }
 

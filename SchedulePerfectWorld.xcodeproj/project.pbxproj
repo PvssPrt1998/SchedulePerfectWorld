@@ -27,7 +27,7 @@
 		99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C722BF7620E00F626A4 /* NeumorphismShadows.swift */; };
 		99871C792BF78BBF00F626A4 /* RingedLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */; };
 		99871C7D2BF79DBF00F626A4 /* DateCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C7C2BF79DBF00F626A4 /* DateCounter.swift */; };
-		99871C802BF7CC1B00F626A4 /* ScheduleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */; };
+		99871C802BF7CC1B00F626A4 /* ScheduleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99871C7F2BF7CC1B00F626A4 /* ScheduleRow.swift */; };
 		99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */; };
 		99F6B4F32C0E3A62002E8CF4 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */; };
 		99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */; };
@@ -93,7 +93,7 @@
 		99871C722BF7620E00F626A4 /* NeumorphismShadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismShadows.swift; sourceTree = "<group>"; };
 		99871C782BF78BBF00F626A4 /* RingedLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingedLinkedList.swift; sourceTree = "<group>"; };
 		99871C7C2BF79DBF00F626A4 /* DateCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCounter.swift; sourceTree = "<group>"; };
-		99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRowView.swift; sourceTree = "<group>"; };
+		99871C7F2BF7CC1B00F626A4 /* ScheduleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRow.swift; sourceTree = "<group>"; };
 		99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		99F6B4F42C0E3AA2002E8CF4 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				99F6B4F22C0E3A62002E8CF4 /* ScheduleViewModel.swift */,
-				99871C7F2BF7CC1B00F626A4 /* ScheduleRowView.swift */,
+				99871C7F2BF7CC1B00F626A4 /* ScheduleRow.swift */,
 				9901988F2BFA2B2000BFB37C /* ScheduleView.swift */,
 			);
 			path = ScheduleView;
@@ -491,7 +491,7 @@
 				99871C592BF738FF00F626A4 /* DatePickerView.swift in Sources */,
 				99F6B5192C107652002E8CF4 /* GreetingViewBaseState.swift in Sources */,
 				99F6B51D2C109001002E8CF4 /* GreetingViewContext.swift in Sources */,
-				99871C802BF7CC1B00F626A4 /* ScheduleRowView.swift in Sources */,
+				99871C802BF7CC1B00F626A4 /* ScheduleRow.swift in Sources */,
 				9901989B2BFB916700BFB37C /* Appearance.swift in Sources */,
 				99F6B5082C0F7550002E8CF4 /* GreetingView.swift in Sources */,
 				99871C532BF71FC100F626A4 /* Model.swift in Sources */,

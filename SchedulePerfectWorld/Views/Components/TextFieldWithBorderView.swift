@@ -12,7 +12,8 @@ struct TextFieldWithBorderView: View {
     var binding: Binding<String>
     
     var body: some View {
-        TextField("", text: binding)
+        TextField("", text: binding, axis: .vertical)
+            .lineLimit(1...3)
             .tint(.gray)
             .padding(.horizontal, 9)
             .padding(.vertical, 8)
