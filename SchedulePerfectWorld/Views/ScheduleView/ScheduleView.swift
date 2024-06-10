@@ -25,9 +25,10 @@ struct ScheduleView: View {
             .background(Color.element)
             .clipShape(.rect(cornerRadius: 8))
             .northWestShadow()
-            .padding(20)
+            .padding(25)
         }
         .scrollBounceBehavior(.basedOnSize)
+        .padding(.top, 40)
         .toolbar {
             Button {
                 didClickEditButton.send(true)

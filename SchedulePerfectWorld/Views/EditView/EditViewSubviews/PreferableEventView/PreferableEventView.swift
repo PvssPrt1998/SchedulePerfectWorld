@@ -41,7 +41,7 @@ struct PreferableEventView: View {
                             }
                         }
                     }
-                    .background(Color.white)
+                    .background(Color.preferableEventsListBackground)
                 .clipShape(.rect(cornerRadius: 8))
                 }
                 .scrollBounceBehavior(.basedOnSize)
