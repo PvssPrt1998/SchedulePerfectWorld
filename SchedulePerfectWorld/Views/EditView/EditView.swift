@@ -9,6 +9,13 @@ import SwiftUI
 
 struct EditView: View {
     
+    enum Field: Hashable {
+        case greetingField
+        case preferableEventField
+    }
+    
+    @FocusState var focusedField: Field?
+    
     var viewModel: EditViewModel
     
     var body: some View {
@@ -18,14 +25,17 @@ struct EditView: View {
             VStack(spacing: 16) {
                 ColorSchemeView(viewModel: viewModel.colorSchemeViewModel)
                 Divider()
-                GreetingView(viewModel: viewModel.greetingEditViewModel)
+                GreetingView(viewModel: viewModel.greetingEditViewModel, focused: $focusedField)
                 Divider()
                 PreventiveWorkView(viewModel: viewModel.preventiveWorkViewModel)
                 Divider()
-                PreferableEventView(viewModel: viewModel.preferableEventViewModel)
+                PreferableEventView(viewModel: viewModel.preferableEventViewModel, focused: $focusedField)
                 Spacer()
             }
             .padding()
+        }
+        .onTapGesture {
+            focusedField = nil
         }
     }
 }

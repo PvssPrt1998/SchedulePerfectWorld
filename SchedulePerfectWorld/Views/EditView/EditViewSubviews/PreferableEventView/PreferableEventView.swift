@@ -10,15 +10,20 @@ import SwiftUI
 struct PreferableEventView: View {
 
     var viewModel: PreferableEventViewModel
+    var focused: FocusState<EditView.Field?>.Binding
     
     var body: some View {
         VStack {
-            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel)
+            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused)
             PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel)
         }
     }
 }
 
-#Preview {
-    PreferableEventView(viewModel: PreferableEventViewModel(scheduleController: ScheduleController()))
+struct PreferableEventView_Preview: PreviewProvider {
+    @FocusState static var focused: EditView.Field?
+    @State static var text = ""
+    static var previews: some View {
+        PreferableEventView(viewModel: PreferableEventViewModel(scheduleController: ScheduleController()), focused: $focused)
+    }
 }

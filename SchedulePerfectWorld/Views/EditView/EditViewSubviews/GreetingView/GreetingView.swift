@@ -10,13 +10,15 @@ import SwiftUI
 struct GreetingView: View {
     
     @ObservedObject var viewModel: GreetingViewModel
+    var focused: FocusState<EditView.Field?>.Binding
     
     var body: some View {
         VStack(spacing: 2) {
             CaptionText(text: "Изменить приветствие")
             HStack {
                 if viewModel.isEditableView() {
-                    TextFieldWithBorderView(binding: $viewModel.text)
+                    TextFieldWithBorderView(binding: $viewModel.text, focused: focused, field: EditView.Field.greetingField)
+                        .onTapGesture { }
                 } else {
                     AddedText(text: viewModel.text)
                 }
@@ -31,6 +33,10 @@ struct GreetingView: View {
     }
 }
 
-#Preview {
-    GreetingView(viewModel: GreetingViewModel(scheduleController: ScheduleController()))
+struct GreetingView_Preview : PreviewProvider {
+    @FocusState static var focused: EditView.Field?
+    @State static var text = ""
+    static var previews: some View {
+        GreetingView(viewModel: GreetingViewModel(scheduleController: ScheduleController()), focused: $focused)
+    }
 }

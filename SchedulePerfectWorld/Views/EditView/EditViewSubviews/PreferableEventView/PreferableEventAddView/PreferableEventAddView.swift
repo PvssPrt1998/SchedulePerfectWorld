@@ -10,6 +10,7 @@ import SwiftUI
 struct PreferableEventAddView: View {
     
     @ObservedObject var viewModel: PreferableEventAddViewModel
+    var focused: FocusState<EditView.Field?>.Binding
     
     var body: some View {
         VStack(spacing: 2) {
@@ -18,7 +19,12 @@ struct PreferableEventAddView: View {
                 Spacer()
             }
             HStack {
-                TextFieldWithBorderView(binding: $viewModel.text, borderColor: viewModel.textFieldBorderColor)
+                TextFieldWithBorderView(binding: $viewModel.text,
+                                        focused: focused, field: EditView.Field.preferableEventField,
+                                        borderColor: viewModel.textFieldBorderColor)
+                .onTapGesture {
+                    print("PreferableEventTap")
+                }
                 Spacer()
                 AddOrRemoveButton(imageTitle: "plus",
                                   imageTintColor: viewModel.addButtonTintColor,
@@ -29,6 +35,12 @@ struct PreferableEventAddView: View {
     }
 }
 
-#Preview {
-    PreferableEventAddView(viewModel: PreferableEventAddViewModel(scheduleController: ScheduleController()))
+
+struct PreferableEventAddView_Preview: PreviewProvider {
+    @FocusState static var focused: EditView.Field?
+    @State static var text = ""
+    static var previews: some View {
+        PreferableEventAddView(viewModel: PreferableEventAddViewModel(scheduleController: ScheduleController()), 
+                               focused: $focused)
+    }
 }

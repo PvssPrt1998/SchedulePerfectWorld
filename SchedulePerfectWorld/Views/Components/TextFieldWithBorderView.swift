@@ -10,13 +10,14 @@ import SwiftUI
 struct TextFieldWithBorderView: View {
     
     var binding: Binding<String>
-    @FocusState var focused: Bool
+    var focused: FocusState<EditView.Field?>.Binding
+    var field: EditView.Field?
     var borderColor: Color?
     
     var body: some View {
         TextField("", text: binding, axis: .vertical)
             .lineLimit(1...3)
-            .focused($focused)
+            .focused(focused, equals: field)
             .tint(.gray)
             .padding(.horizontal, 9)
             .padding(.vertical, 8)
@@ -35,9 +36,10 @@ struct TextFieldWithBorderView: View {
 }
 
 struct TextFieldWithBorder_Preview : PreviewProvider {
+    @FocusState static var focused: EditView.Field?
     @State static var text = ""
     static var previews: some View {
-        TextFieldWithBorderView(binding: $text)
+        TextFieldWithBorderView(binding: $text, focused: $focused, field: .greetingField)
     }
 }
 
