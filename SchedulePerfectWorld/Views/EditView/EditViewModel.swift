@@ -5,7 +5,7 @@
 //  Created by Николай Щербаков on 03.06.2024.
 //
 
-import Foundation
+import SwiftUI
 
 class EditViewModel: ObservableObject {
     

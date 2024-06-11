@@ -11,11 +11,27 @@ struct PreferableEventView: View {
 
     var viewModel: PreferableEventViewModel
     var focused: FocusState<EditView.Field?>.Binding
+    @ObservedObject var spaceController: SpaceController
+    
+    enum ListPositionState {
+        case fullScreen
+        case normal
+    }
+    
+    var listPositionState: ListPositionState = .normal
     
     var body: some View {
         VStack {
             PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused)
-            PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel)
+                .background(
+                    GeometryReader {proxy in
+                        Color.clear.padding().onAppear(perform: {
+                            spaceController.textFieldHeight = proxy.size.height
+                        })
+                    }
+                )
+            Color.clear.frame(height: spaceController.space)
+            PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController)
         }
     }
 }
@@ -24,6 +40,8 @@ struct PreferableEventView_Preview: PreviewProvider {
     @FocusState static var focused: EditView.Field?
     @State static var text = ""
     static var previews: some View {
-        PreferableEventView(viewModel: PreferableEventViewModel(scheduleController: ScheduleController()), focused: $focused)
+        PreferableEventView(viewModel: PreferableEventViewModel(scheduleController: ScheduleController()),
+                            focused: $focused,
+                            spaceController: SpaceController())
     }
 }

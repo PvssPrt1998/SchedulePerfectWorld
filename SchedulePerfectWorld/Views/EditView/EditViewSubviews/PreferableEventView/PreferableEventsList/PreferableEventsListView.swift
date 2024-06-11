@@ -10,6 +10,7 @@ import SwiftUI
 struct PreferableEventsListView: View {
     
     @ObservedObject var viewModel: PreferableEventsListViewModel
+    @ObservedObject var spaceController: SpaceController
     
     var body: some View {
         if !viewModel.isPreferableEventsNilOrEmpty() {
@@ -33,6 +34,24 @@ struct PreferableEventsListView: View {
                 }
                 .background(Color.preferableEventsListBackground)
                 .clipShape(.rect(cornerRadius: 8))
+                .gesture(
+                    DragGesture(minimumDistance: 10.0, coordinateSpace: .local)
+                        .onEnded({ value in
+                            if value.translation.height < 0 {
+                                withAnimation(.linear(duration: 0.1)) {
+                                    spaceController.space = 100
+                                    spaceController.offset = spaceController.getTotalOffset()
+                                }
+                            }
+                            
+                            if value.translation.height > 0 {
+                                withAnimation(.linear(duration: 0.1)) {
+                                    spaceController.space = 0
+                                    spaceController.offset = 0
+                                }
+                            }
+                        })
+                )
             }
             .scrollBounceBehavior(.basedOnSize)
         }
@@ -40,5 +59,5 @@ struct PreferableEventsListView: View {
 }
 
 #Preview {
-    PreferableEventsListView(viewModel: PreferableEventsListViewModel(scheduleController: ScheduleController()))
+    PreferableEventsListView(viewModel: PreferableEventsListViewModel(scheduleController: ScheduleController()), spaceController: SpaceController())
 }
