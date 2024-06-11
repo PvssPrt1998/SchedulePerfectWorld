@@ -12,18 +12,20 @@ struct PreferableEventView: View {
     var viewModel: PreferableEventViewModel
     var focused: FocusState<EditView.Field?>.Binding
     @ObservedObject var spaceController: SpaceController
+    @State var offset: CGFloat = 0
     
     var body: some View {
         VStack {
-            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused)
+            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
                 .background(
-                    GeometryReader {proxy in
+                    GeometryReader { proxy in
                         Color.clear.padding().onAppear(perform: {
                             spaceController.textFieldHeight = proxy.size.height
                         })
                     }
                 )
-            Color.clear.frame(height: spaceController.space)
+                .offset(x: 0, y: -spaceController.space)
+            Spacer().frame(height: spaceController.space)
             PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController, focused: focused)
         }
     }

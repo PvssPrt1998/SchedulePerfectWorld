@@ -11,6 +11,7 @@ struct PreferableEventAddView: View {
     
     @ObservedObject var viewModel: PreferableEventAddViewModel
     var focused: FocusState<EditView.Field?>.Binding
+    var spaceController: SpaceController
     
     var body: some View {
         VStack(spacing: 2) {
@@ -22,9 +23,19 @@ struct PreferableEventAddView: View {
                 TextFieldWithBorderView(binding: $viewModel.text,
                                         focused: focused, field: EditView.Field.preferableEventField,
                                         borderColor: viewModel.textFieldBorderColor)
-                .onTapGesture {
-                    print("PreferableEventTap")
+                .onChange(of: focused.wrappedValue) {
+                    if focused.wrappedValue == .preferableEventField {
+                        spaceController.toLargeState()
+                    }
+                    if focused.wrappedValue != .preferableEventField {
+                        spaceController.toNormalState()
+                    }
                 }
+//                .onChange {
+//                    if focused.wrappedValue == .preferableEventField {
+//                        print("kek")
+//                    }
+//                }
                 Spacer()
                 AddOrRemoveButton(imageTitle: "plus",
                                   imageTintColor: viewModel.addButtonTintColor,
@@ -41,6 +52,6 @@ struct PreferableEventAddView_Preview: PreviewProvider {
     @State static var text = ""
     static var previews: some View {
         PreferableEventAddView(viewModel: PreferableEventAddViewModel(scheduleController: ScheduleController()), 
-                               focused: $focused)
+                               focused: $focused, spaceController: SpaceController())
     }
 }

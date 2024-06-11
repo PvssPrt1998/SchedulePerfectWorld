@@ -13,10 +13,6 @@ struct EditView: View {
         case greetingField
         case preferableEventField
     }
-//    
-//    @State var largeState: Bool = false
-//    @State var offset: CGFloat = 0
-//    @State var heightOffset: CGFloat = 0
     
     @StateObject var spaceController = SpaceController()
     
@@ -65,31 +61,4 @@ struct EditView: View {
 
 #Preview {
     EditView(viewModel: EditViewModel(scheduleController: ScheduleController(), colorSchemeController: ColorSchemeController()))
-}
-
-final class SpaceController: ObservableObject {
-    @Published var offset: CGFloat = 0
-    var height: CGFloat = 0
-    var space: CGFloat = 0
-    var textFieldHeight: CGFloat = 0
-    
-    func getTotalOffset() -> CGFloat {
-        -height - textFieldHeight - space
-    }
-    
-    func dragGestureAction(value: DragGesture.Value) {
-        if value.translation.height < 0 {
-            withAnimation(.linear(duration: 0.1)) {
-                self.space = 200
-                self.offset = self.getTotalOffset()
-            }
-        }
-        
-        if value.translation.height > 0 {
-            withAnimation(.linear(duration: 0.1)) {
-                self.space = 0
-                self.offset = 0
-            }
-        }
-    }
 }

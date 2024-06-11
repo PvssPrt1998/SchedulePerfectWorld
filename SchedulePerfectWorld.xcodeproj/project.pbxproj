@@ -74,6 +74,7 @@
 		99F6B5722C18528C002E8CF4 /* PreferableEventAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5712C18528C002E8CF4 /* PreferableEventAddViewModel.swift */; };
 		99F6B5742C18529D002E8CF4 /* PreferableEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5732C18529D002E8CF4 /* PreferableEventsListView.swift */; };
 		99F6B5762C1852AB002E8CF4 /* PreferableEventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5752C1852AB002E8CF4 /* PreferableEventsListViewModel.swift */; };
+		99F6B57A2C18F7BE002E8CF4 /* SpaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		99F6B5712C18528C002E8CF4 /* PreferableEventAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventAddViewModel.swift; sourceTree = "<group>"; };
 		99F6B5732C18529D002E8CF4 /* PreferableEventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventsListView.swift; sourceTree = "<group>"; };
 		99F6B5752C1852AB002E8CF4 /* PreferableEventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventsListViewModel.swift; sourceTree = "<group>"; };
+		99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		99871C5A2BF7390400F626A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				99F6B5372C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift */,
 				99871C582BF738FF00F626A4 /* DatePickerView.swift */,
 				991B73B82BF9E3F800A10CD5 /* TextFieldWithBorderView.swift */,
 				990198932BFB719500BFB37C /* AddedText.swift */,
@@ -248,7 +251,7 @@
 			children = (
 				99F6B5052C0F739D002E8CF4 /* EditView.swift */,
 				99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */,
-				99F6B5372C12064D002E8CF4 /* AddOrRemoveButtonTitle.swift */,
+				99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */,
 				99F6B5462C132248002E8CF4 /* EditViewSubviews */,
 			);
 			path = EditView;
@@ -512,6 +515,7 @@
 			files = (
 				99F6B52B2C11FC9C002E8CF4 /* PreventiveWorkViewContext.swift in Sources */,
 				99F6B5212C109997002E8CF4 /* AddOrRemoveButton.swift in Sources */,
+				99F6B57A2C18F7BE002E8CF4 /* SpaceController.swift in Sources */,
 				99F6B55C2C1608D6002E8CF4 /* PreferableEventsStorage.xcdatamodeld in Sources */,
 				99F6B4FA2C0F2FE5002E8CF4 /* EditViewCoordinator.swift in Sources */,
 				99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */,
