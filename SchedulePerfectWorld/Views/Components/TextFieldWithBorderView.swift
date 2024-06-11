@@ -31,16 +31,6 @@ struct TextFieldWithBorderView: View {
                         .southEastShadow(radius: 1, offset: 1)
                 }
             )
-            .toolbar {
-                if focused {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        Button("Done") {
-                            focused = false
-                        }
-                    }
-                }
-            }
     }
 }
 

@@ -9,16 +9,14 @@ import Foundation
 
 final class PreferableEventViewTextAlreadyExistErrorState: PreferableEventViewBaseState {
     override func toEmptyTextState() {
-        context?.text = ""
-        context?.showErrorCaption = false
-        context?.textFieldBorderColor = nil
-        context?.isAddButtonDisabled = true
+        captionNormalState()
+        textFieldBorderNormalState()
         context?.transition(to: PreferableEventViewEmptyTextState())
     }
     override func toEnteredTextState() { 
-        context?.textFieldBorderColor = nil
-        context?.showErrorCaption = false
-        context?.isAddButtonDisabled = false
+        captionNormalState()
+        textFieldBorderNormalState()
+        addButtonToActiveState()
         context?.transition(to: PreferableEventViewWithTextState())
     }
 }

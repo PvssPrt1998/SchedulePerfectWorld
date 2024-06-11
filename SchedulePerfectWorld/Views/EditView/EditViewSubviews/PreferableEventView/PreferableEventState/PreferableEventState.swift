@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PreferableEventViewState {
+protocol PreferableEventAddViewState {
     
     func update(context: PreferableEventContext)
     

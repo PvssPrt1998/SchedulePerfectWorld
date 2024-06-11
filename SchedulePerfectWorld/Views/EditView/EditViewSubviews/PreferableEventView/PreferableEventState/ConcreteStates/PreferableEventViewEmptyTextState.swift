@@ -9,8 +9,7 @@ import SwiftUI
 
 final class PreferableEventViewEmptyTextState: PreferableEventViewBaseState {
     override func toEnteredTextState() {
-        context?.isAddButtonDisabled = false
-        context?.textFieldBorderColor = nil
+        addButtonToActiveState()
         context?.transition(to: PreferableEventViewWithTextState())
     }
 }

@@ -18,8 +18,7 @@ class ScheduleViewModel: ObservableObject {
     
     init(scheduleController: ScheduleController) {
         self.scheduleController = scheduleController
-        scheduleController.$schedule
-            .sink { [weak self] schedule in
+        scheduleController.$schedule.sink { [weak self] schedule in
             self?.makeScheduleItemArray(schedule: schedule)
         }
         .store(in: &cancellables)
