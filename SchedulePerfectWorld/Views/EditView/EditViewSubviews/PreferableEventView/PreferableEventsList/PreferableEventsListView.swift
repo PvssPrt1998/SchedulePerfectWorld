@@ -11,6 +11,7 @@ struct PreferableEventsListView: View {
     
     @ObservedObject var viewModel: PreferableEventsListViewModel
     @ObservedObject var spaceController: SpaceController
+    var focused: FocusState<EditView.Field?>.Binding
     
     var body: some View {
         if !viewModel.isPreferableEventsNilOrEmpty() {
@@ -37,18 +38,8 @@ struct PreferableEventsListView: View {
                 .gesture(
                     DragGesture(minimumDistance: 10.0, coordinateSpace: .local)
                         .onEnded({ value in
-                            if value.translation.height < 0 {
-                                withAnimation(.linear(duration: 0.1)) {
-                                    spaceController.space = 100
-                                    spaceController.offset = spaceController.getTotalOffset()
-                                }
-                            }
-                            
-                            if value.translation.height > 0 {
-                                withAnimation(.linear(duration: 0.1)) {
-                                    spaceController.space = 0
-                                    spaceController.offset = 0
-                                }
+                            if focused.wrappedValue == nil {
+                                spaceController.dragGestureAction(value: value)
                             }
                         })
                 )
@@ -58,6 +49,10 @@ struct PreferableEventsListView: View {
     }
 }
 
-#Preview {
-    PreferableEventsListView(viewModel: PreferableEventsListViewModel(scheduleController: ScheduleController()), spaceController: SpaceController())
+struct PreferableEventsListView_Preview: PreviewProvider {
+    @FocusState static var focused: EditView.Field?
+    @State static var text = ""
+    static var previews: some View {
+        PreferableEventsListView(viewModel: PreferableEventsListViewModel(scheduleController: ScheduleController()), spaceController: SpaceController(), focused: $focused)
+    }
 }

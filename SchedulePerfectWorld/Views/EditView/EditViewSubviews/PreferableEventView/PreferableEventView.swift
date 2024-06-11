@@ -13,13 +13,6 @@ struct PreferableEventView: View {
     var focused: FocusState<EditView.Field?>.Binding
     @ObservedObject var spaceController: SpaceController
     
-    enum ListPositionState {
-        case fullScreen
-        case normal
-    }
-    
-    var listPositionState: ListPositionState = .normal
-    
     var body: some View {
         VStack {
             PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused)
@@ -31,7 +24,7 @@ struct PreferableEventView: View {
                     }
                 )
             Color.clear.frame(height: spaceController.space)
-            PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController)
+            PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController, focused: focused)
         }
     }
 }
