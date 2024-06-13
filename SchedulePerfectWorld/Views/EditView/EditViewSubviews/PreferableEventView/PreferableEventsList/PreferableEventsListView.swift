@@ -15,36 +15,51 @@ struct PreferableEventsListView: View {
     
     var body: some View {
         if !viewModel.isPreferableEventsNilOrEmpty() {
-            ScrollView {
-                LazyVStack(spacing: 2) {
-                    ForEach(viewModel.preferableEventsArray, id: \.self) { item in
-                        VStack {
-                            HStack {
-                                AddedText(text: item.description)
-                                Spacer()
-                                AddOrRemoveButton(imageTitle: "minus",
-                                                  imageTintColor: .buttonIsActive) {
-                                    viewModel.removeButtonAction(text: item.description)
+            VStack(spacing: 16) {
+                ScrollView {
+                    LazyVStack(spacing: 2) {
+                        ForEach(viewModel.preferableEventsArray, id: \.self) { item in
+                            VStack {
+                                HStack {
+                                    AddedText(text: item.description)
+                                    Spacer()
+                                    AddOrRemoveButton(imageTitle: "minus",
+                                                      imageTintColor: .buttonIsActive) {
+                                        viewModel.removeButtonAction(text: item.description)
+                                    }
                                 }
-                            }
-                            if item != viewModel.preferableEventsArray.last && viewModel.preferableEventsArray.count != 1 {
-                                Divider()
+                                if item != viewModel.preferableEventsArray.last && viewModel.preferableEventsArray.count != 1 {
+                                    Divider()
+                                }
                             }
                         }
                     }
+                    .background(Color.preferableEventsListBackground)
+                    .clipShape(.rect(cornerRadius: 8))
+                    .gesture(
+                        DragGesture(minimumDistance: 5.0, coordinateSpace: .local)
+                            .onEnded({ value in
+                                if focused.wrappedValue == nil {
+                                    spaceController.dragGestureAction(value: value)
+                                }
+                            })
+                    )
                 }
-                .background(Color.preferableEventsListBackground)
+                .scrollBounceBehavior(.basedOnSize)
+                .scrollDisabled(spaceController.listScrollDisabled)
                 .clipShape(.rect(cornerRadius: 8))
-                .gesture(
-                    DragGesture(minimumDistance: 10.0, coordinateSpace: .local)
-                        .onEnded({ value in
-                            if focused.wrappedValue == nil {
-                                spaceController.dragGestureAction(value: value)
-                            }
-                        })
-                )
+                
+                if spaceController.isListLargeState() {
+                    Button {
+                        spaceController.downButtonPressed()
+                    } label: {
+                        Image(systemName: "chevron.compact.down")
+                            .resizable()
+                            .tint(.gray)
+                            .frame(width: 100, height: 20)
+                    }
+                }
             }
-            .scrollBounceBehavior(.basedOnSize)
         }
     }
 }

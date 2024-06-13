@@ -21,40 +21,51 @@ struct EditView: View {
     var viewModel: EditViewModel
     
     var body: some View {
-        ZStack {
-            Color.element
-                .ignoresSafeArea()
-            ScrollViewReader { scrollValue in
-                ScrollView(.vertical) {
+        GeometryReader { proxy in
+            ZStack {
+                Color.element
+                    .ignoresSafeArea()
+                VStack(spacing: 16) {
                     VStack(spacing: 16) {
-                        VStack(spacing: 16) {
-                            ColorSchemeView(viewModel: viewModel.colorSchemeViewModel)
-                            Divider()
-                            GreetingView(viewModel: viewModel.greetingEditViewModel, focused: $focusedField)
-                            Divider()
-                            PreventiveWorkView(viewModel: viewModel.preventiveWorkViewModel)
-                            Divider()
-                        }
-                        .background(
-                            GeometryReader {proxy in
-                                Color.clear.padding().onAppear(perform: {
-                                    spaceController.height = proxy.size.height
-                                })
-                            }
-                        )
-                        PreferableEventView(viewModel: viewModel.preferableEventViewModel, 
-                                            focused: $focusedField,
-                                            spaceController: spaceController)
-                        Spacer()
+                        ColorSchemeView(viewModel: viewModel.colorSchemeViewModel)
+                        Divider()
+                        GreetingView(viewModel: viewModel.greetingEditViewModel, focused: $focusedField)
+                        Divider()
+                        PreventiveWorkView(viewModel: viewModel.preventiveWorkViewModel)
+                        Divider()
                     }
-                    .padding()
+                    .background(
+                        GeometryReader { vStackGeometry in
+                            Color.clear.padding().onAppear(perform: {
+                                spaceController.elementsAboveAddTextFieldHeight = vStackGeometry.size.height
+                            })
+                        }
+                    )
+                    PreferableEventView(viewModel: viewModel.preferableEventViewModel,
+                                        focused: $focusedField,
+                                        spaceController: spaceController)
+                        .keyboardHeightEnvironmentValue()
+                    Spacer()
+                }//VStack
+                .padding()
+            }//ZStack
+            .offset(x: 0, y: spaceController.moveUpOffset)
+            .frame(height: proxy.size.height - spaceController.moveUpOffset)
+            .background(
+                GeometryReader { editViewGeometry in
+                    Color.clear.onAppear(perform: {
+                        DispatchQueue.main.async {
+                            spaceController.screenHeight = editViewGeometry.size.height
+                            spaceController.safeAreaTop = editViewGeometry.safeAreaInsets.top
+                            spaceController.safeAreaBottomHeight = editViewGeometry.safeAreaInsets.bottom
+                        }
+                    })
                 }
-                .content.offset(x: 0, y: spaceController.offset)
-                .scrollDisabled(true)
+            )
+            .onTapGesture {
+                focusedField = nil
             }
-        }
-        .onTapGesture {
-            focusedField = nil
+            .ignoresSafeArea(.keyboard)
         }
     }
 }

@@ -12,21 +12,26 @@ struct PreferableEventView: View {
     var viewModel: PreferableEventViewModel
     var focused: FocusState<EditView.Field?>.Binding
     @ObservedObject var spaceController: SpaceController
-    @State var offset: CGFloat = 0
+    @Environment(\.keyboardHeight) var keyboardHeight
     
     var body: some View {
-        VStack {
-            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
-                .background(
-                    GeometryReader { proxy in
-                        Color.clear.padding().onAppear(perform: {
-                            spaceController.textFieldHeight = proxy.size.height
-                        })
-                    }
-                )
-                .offset(x: 0, y: -spaceController.space)
-            Spacer().frame(height: spaceController.space)
-            PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController, focused: focused)
+        ZStack(alignment: .top) {
+            VStack {
+                PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController).hidden()
+                Spacer().frame(height: spaceController.spacingUnderAddTextField)
+                PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController, focused: focused)
+                Spacer().frame(height: spaceController.underListViewBottomSpacing)
+            }
+            .padding(.top, 8)
+                PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
+                    .background(
+                        GeometryReader { preferableEventAddViewGeometry in
+                            Color.clear.padding().onAppear(perform: {
+                                spaceController.addTextFieldHeight = preferableEventAddViewGeometry.size.height
+                            })
+                        }
+                    )
+                    .offset(x: 0, y: spaceController.addTextFieldOffset - keyboardHeight)
         }
     }
 }

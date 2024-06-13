@@ -75,6 +75,18 @@
 		99F6B5742C18529D002E8CF4 /* PreferableEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5732C18529D002E8CF4 /* PreferableEventsListView.swift */; };
 		99F6B5762C1852AB002E8CF4 /* PreferableEventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5752C1852AB002E8CF4 /* PreferableEventsListViewModel.swift */; };
 		99F6B57A2C18F7BE002E8CF4 /* SpaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */; };
+		99F6B57F2C1A1302002E8CF4 /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B57E2C1A1302002E8CF4 /* ListState.swift */; };
+		99F6B5812C1A1339002E8CF4 /* ListStateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5802C1A1339002E8CF4 /* ListStateContext.swift */; };
+		99F6B5842C1A1416002E8CF4 /* ListBaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5832C1A1415002E8CF4 /* ListBaseState.swift */; };
+		99F6B5872C1A14CC002E8CF4 /* ListNormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5862C1A14CC002E8CF4 /* ListNormalState.swift */; };
+		99F6B5892C1A14D6002E8CF4 /* ListLargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5882C1A14D5002E8CF4 /* ListLargeState.swift */; };
+		99F6B58C2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B58B2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift */; };
+		99F6B58E2C1A1E05002E8CF4 /* ListWithTextFieldContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B58D2C1A1E05002E8CF4 /* ListWithTextFieldContext.swift */; };
+		99F6B5902C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B58F2C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift */; };
+		99F6B5932C1A1E32002E8CF4 /* ListWithTextFieldNormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5922C1A1E32002E8CF4 /* ListWithTextFieldNormalState.swift */; };
+		99F6B5952C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5942C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift */; };
+		99F6B5972C1A2766002E8CF4 /* keyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5962C1A2766002E8CF4 /* keyboardReadable.swift */; };
+		99F6B59A2C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5992C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +159,18 @@
 		99F6B5732C18529D002E8CF4 /* PreferableEventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventsListView.swift; sourceTree = "<group>"; };
 		99F6B5752C1852AB002E8CF4 /* PreferableEventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferableEventsListViewModel.swift; sourceTree = "<group>"; };
 		99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceController.swift; sourceTree = "<group>"; };
+		99F6B57E2C1A1302002E8CF4 /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
+		99F6B5802C1A1339002E8CF4 /* ListStateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStateContext.swift; sourceTree = "<group>"; };
+		99F6B5832C1A1415002E8CF4 /* ListBaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBaseState.swift; sourceTree = "<group>"; };
+		99F6B5862C1A14CC002E8CF4 /* ListNormalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNormalState.swift; sourceTree = "<group>"; };
+		99F6B5882C1A14D5002E8CF4 /* ListLargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLargeState.swift; sourceTree = "<group>"; };
+		99F6B58B2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldState.swift; sourceTree = "<group>"; };
+		99F6B58D2C1A1E05002E8CF4 /* ListWithTextFieldContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldContext.swift; sourceTree = "<group>"; };
+		99F6B58F2C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldBaseState.swift; sourceTree = "<group>"; };
+		99F6B5922C1A1E32002E8CF4 /* ListWithTextFieldNormalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldNormalState.swift; sourceTree = "<group>"; };
+		99F6B5942C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldLargeState.swift; sourceTree = "<group>"; };
+		99F6B5962C1A2766002E8CF4 /* keyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardReadable.swift; sourceTree = "<group>"; };
+		99F6B5992C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightEnvironmentValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +237,9 @@
 			children = (
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
-				99F6B5452C1321FE002E8CF4 /* ViewModelFactory */,
 				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
+				99F6B5452C1321FE002E8CF4 /* ViewModelFactory */,
+				99F6B5982C1AE73E002E8CF4 /* KeyboardManagement */,
 				990198992BFB88C800BFB37C /* Views */,
 				990198702BFA01D300BFB37C /* Service */,
 				99871C6F2BF75EC200F626A4 /* Utils */,
@@ -251,7 +276,7 @@
 			children = (
 				99F6B5052C0F739D002E8CF4 /* EditView.swift */,
 				99F6B4F02C0E395B002E8CF4 /* EditViewModel.swift */,
-				99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */,
+				99F6B57D2C1A1299002E8CF4 /* SpaceControllerState */,
 				99F6B5462C132248002E8CF4 /* EditViewSubviews */,
 			);
 			path = EditView;
@@ -443,6 +468,65 @@
 			path = PreferableEventsList;
 			sourceTree = "<group>";
 		};
+		99F6B57D2C1A1299002E8CF4 /* SpaceControllerState */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5792C18F7BE002E8CF4 /* SpaceController.swift */,
+				99F6B5822C1A13BE002E8CF4 /* ListState */,
+				99F6B58A2C1A1DD5002E8CF4 /* ListWithTextFieldState */,
+			);
+			path = SpaceControllerState;
+			sourceTree = "<group>";
+		};
+		99F6B5822C1A13BE002E8CF4 /* ListState */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B57E2C1A1302002E8CF4 /* ListState.swift */,
+				99F6B5802C1A1339002E8CF4 /* ListStateContext.swift */,
+				99F6B5832C1A1415002E8CF4 /* ListBaseState.swift */,
+				99F6B5852C1A14AD002E8CF4 /* ListConcreteStates */,
+			);
+			path = ListState;
+			sourceTree = "<group>";
+		};
+		99F6B5852C1A14AD002E8CF4 /* ListConcreteStates */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5862C1A14CC002E8CF4 /* ListNormalState.swift */,
+				99F6B5882C1A14D5002E8CF4 /* ListLargeState.swift */,
+			);
+			path = ListConcreteStates;
+			sourceTree = "<group>";
+		};
+		99F6B58A2C1A1DD5002E8CF4 /* ListWithTextFieldState */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B58B2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift */,
+				99F6B58D2C1A1E05002E8CF4 /* ListWithTextFieldContext.swift */,
+				99F6B58F2C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift */,
+				99F6B5912C1A1E16002E8CF4 /* ListWithTextFieldConcreteStates */,
+			);
+			path = ListWithTextFieldState;
+			sourceTree = "<group>";
+		};
+		99F6B5912C1A1E16002E8CF4 /* ListWithTextFieldConcreteStates */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5922C1A1E32002E8CF4 /* ListWithTextFieldNormalState.swift */,
+				99F6B5942C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift */,
+			);
+			path = ListWithTextFieldConcreteStates;
+			sourceTree = "<group>";
+		};
+		99F6B5982C1AE73E002E8CF4 /* KeyboardManagement */ = {
+			isa = PBXGroup;
+			children = (
+				99F6B5962C1A2766002E8CF4 /* keyboardReadable.swift */,
+				99F6B5992C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift */,
+			);
+			path = KeyboardManagement;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,9 +604,11 @@
 				99F6B4FA2C0F2FE5002E8CF4 /* EditViewCoordinator.swift in Sources */,
 				99F6B5282C10B539002E8CF4 /* PreventiveWorkViewModel.swift in Sources */,
 				991B73B92BF9E3F800A10CD5 /* TextFieldWithBorderView.swift in Sources */,
+				99F6B5812C1A1339002E8CF4 /* ListStateContext.swift in Sources */,
 				99F6B5062C0F739D002E8CF4 /* EditView.swift in Sources */,
 				990198722BFA01F800BFB37C /* ScheduleMaker.swift in Sources */,
 				99871C712BF75ED000F626A4 /* Color+Extension.swift in Sources */,
+				99F6B5932C1A1E32002E8CF4 /* ListWithTextFieldNormalState.swift in Sources */,
 				99871C592BF738FF00F626A4 /* DatePickerView.swift in Sources */,
 				99F6B5192C107652002E8CF4 /* GreetingViewBaseState.swift in Sources */,
 				99F6B51D2C109001002E8CF4 /* GreetingViewContext.swift in Sources */,
@@ -530,6 +616,7 @@
 				9901989B2BFB916700BFB37C /* Appearance.swift in Sources */,
 				99F6B5082C0F7550002E8CF4 /* GreetingView.swift in Sources */,
 				99871C532BF71FC100F626A4 /* Model.swift in Sources */,
+				99F6B5952C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift in Sources */,
 				99F6B5362C120048002E8CF4 /* CaptionText.swift in Sources */,
 				99F6B5042C0F6D8C002E8CF4 /* ScheduleController.swift in Sources */,
 				99F6B52F2C11FE89002E8CF4 /* PreventiveWorkBaseState.swift in Sources */,
@@ -537,6 +624,7 @@
 				99F6B5632C160AB1002E8CF4 /* PreferableEvents+CoreDataClass.swift in Sources */,
 				99F6B5642C160AB1002E8CF4 /* PreferableEvents+CoreDataProperties.swift in Sources */,
 				99F6B5762C1852AB002E8CF4 /* PreferableEventsListViewModel.swift in Sources */,
+				99F6B57F2C1A1302002E8CF4 /* ListState.swift in Sources */,
 				99F6B5522C1331A6002E8CF4 /* PreferableEventViewWithTextState.swift in Sources */,
 				990198822BFA0A8A00BFB37C /* ClanHall.swift in Sources */,
 				99F6B5422C120D99002E8CF4 /* ColorSchemeController.swift in Sources */,
@@ -544,8 +632,10 @@
 				99F6B5682C160B8F002E8CF4 /* LocalStorage.swift in Sources */,
 				99F6B5402C120BFC002E8CF4 /* ColorSchemeView.swift in Sources */,
 				99F6B50A2C0F759D002E8CF4 /* GreetingViewModel.swift in Sources */,
+				99F6B58C2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift in Sources */,
 				99F6B5742C18529D002E8CF4 /* PreferableEventsListView.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
+				99F6B5902C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
 				99F6B56A2C161085002E8CF4 /* ThrowErrorHelper.swift in Sources */,
 				99871C732BF7620E00F626A4 /* NeumorphismShadows.swift in Sources */,
@@ -564,6 +654,8 @@
 				99F6B5262C10B52B002E8CF4 /* PreventiveWorkView.swift in Sources */,
 				99F6B5322C11FFB5002E8CF4 /* PreventiveWorkAddedState.swift in Sources */,
 				99F6B56C2C178E75002E8CF4 /* PreferableEventViewTextAlreadyExistErrorState.swift in Sources */,
+				99F6B59A2C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift in Sources */,
+				99F6B5972C1A2766002E8CF4 /* keyboardReadable.swift in Sources */,
 				99871C642BF7582200F626A4 /* PreferableEventView.swift in Sources */,
 				99F6B54F2C1330AA002E8CF4 /* PreferableEventViewBaseState.swift in Sources */,
 				99F6B5542C1331BC002E8CF4 /* PreferableEventViewEmptyTextState.swift in Sources */,
@@ -573,12 +665,16 @@
 				99F6B5702C18527D002E8CF4 /* PreferableEventAddView.swift in Sources */,
 				990198842BFA0ACC00BFB37C /* EverydayDungeon.swift in Sources */,
 				99871C452BF71EE100F626A4 /* SchedulePerfectWorldApp.swift in Sources */,
+				99F6B5872C1A14CC002E8CF4 /* ListNormalState.swift in Sources */,
 				99F6B5442C1306B2002E8CF4 /* NavigationRouter.swift in Sources */,
 				99F6B54D2C13305C002E8CF4 /* PreferableEventState.swift in Sources */,
 				99F6B4F52C0E3AA2002E8CF4 /* ViewModelFactory.swift in Sources */,
 				99F6B5142C10748E002E8CF4 /* TextFieldWithTextState.swift in Sources */,
+				99F6B58E2C1A1E05002E8CF4 /* ListWithTextFieldContext.swift in Sources */,
 				99F6B4F82C0F2FDB002E8CF4 /* ScheduleViewCoordinator.swift in Sources */,
+				99F6B5842C1A1416002E8CF4 /* ListBaseState.swift in Sources */,
 				99F6B5662C160B66002E8CF4 /* CoreDataStack.swift in Sources */,
+				99F6B5892C1A14D6002E8CF4 /* ListLargeState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

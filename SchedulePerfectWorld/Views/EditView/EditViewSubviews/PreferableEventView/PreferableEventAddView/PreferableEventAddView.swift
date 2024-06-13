@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import Combine
 
-struct PreferableEventAddView: View {
+struct PreferableEventAddView: View, KeyboardReadable {
     
     @ObservedObject var viewModel: PreferableEventAddViewModel
     var focused: FocusState<EditView.Field?>.Binding
@@ -23,19 +24,19 @@ struct PreferableEventAddView: View {
                 TextFieldWithBorderView(binding: $viewModel.text,
                                         focused: focused, field: EditView.Field.preferableEventField,
                                         borderColor: viewModel.textFieldBorderColor)
-                .onChange(of: focused.wrappedValue) {
-                    if focused.wrappedValue == .preferableEventField {
-                        spaceController.toLargeState()
+                .onTapGesture { }
+                .onReceive(keyboardPublisher) { newIsKeyboardVisible in
+                    if newIsKeyboardVisible {
+                        if focused.wrappedValue == .preferableEventField {
+                            spaceController.listWithTextFieldToLargeState()
+                        }
                     }
-                    if focused.wrappedValue != .preferableEventField {
-                        spaceController.toNormalState()
+                    if !newIsKeyboardVisible {
+                        if focused.wrappedValue == .preferableEventField {
+                            spaceController.listWithTextFieldToNormalState()
+                        }
                     }
                 }
-//                .onChange {
-//                    if focused.wrappedValue == .preferableEventField {
-//                        print("kek")
-//                    }
-//                }
                 Spacer()
                 AddOrRemoveButton(imageTitle: "plus",
                                   imageTintColor: viewModel.addButtonTintColor,
