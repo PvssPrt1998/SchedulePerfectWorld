@@ -87,6 +87,7 @@
 		99F6B5952C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5942C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift */; };
 		99F6B5972C1A2766002E8CF4 /* keyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5962C1A2766002E8CF4 /* keyboardReadable.swift */; };
 		99F6B59A2C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B5992C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift */; };
+		99F6B59C2C1AF876002E8CF4 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B59B2C1AF876002E8CF4 /* SizePreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +172,7 @@
 		99F6B5942C1A1E40002E8CF4 /* ListWithTextFieldLargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithTextFieldLargeState.swift; sourceTree = "<group>"; };
 		99F6B5962C1A2766002E8CF4 /* keyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardReadable.swift; sourceTree = "<group>"; };
 		99F6B5992C1AE77D002E8CF4 /* KeyboardHeightEnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightEnvironmentValue.swift; sourceTree = "<group>"; };
+		99F6B59B2C1AF876002E8CF4 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				99871C442BF71EE100F626A4 /* SchedulePerfectWorldApp.swift */,
 				99871C522BF71FC100F626A4 /* Model.swift */,
+				99F6B59B2C1AF876002E8CF4 /* SizePreferenceKey.swift */,
 				99F6B4F62C0F2FBE002E8CF4 /* Coordinator */,
 				99F6B5452C1321FE002E8CF4 /* ViewModelFactory */,
 				99F6B5982C1AE73E002E8CF4 /* KeyboardManagement */,
@@ -635,6 +638,7 @@
 				99F6B58C2C1A1DF8002E8CF4 /* ListWithTextFieldState.swift in Sources */,
 				99F6B5742C18529D002E8CF4 /* PreferableEventsListView.swift in Sources */,
 				990198742BFA021800BFB37C /* WeekdayEnum.swift in Sources */,
+				99F6B59C2C1AF876002E8CF4 /* SizePreferenceKey.swift in Sources */,
 				99F6B5902C1A1E13002E8CF4 /* ListWithTextFieldBaseState.swift in Sources */,
 				99F6B4F12C0E395B002E8CF4 /* EditViewModel.swift in Sources */,
 				99F6B56A2C161085002E8CF4 /* ThrowErrorHelper.swift in Sources */,
@@ -814,8 +818,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,9 +827,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NikolaiShcherbakov.SchedulePerfectWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -843,8 +851,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -852,9 +860,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NikolaiShcherbakov.SchedulePerfectWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

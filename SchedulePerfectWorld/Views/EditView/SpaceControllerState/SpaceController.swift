@@ -9,14 +9,21 @@ import SwiftUI
 
 final class SpaceController: ObservableObject, ListStateContext, ListWithTextFieldContext {
     
-    var moveUpOffset: CGFloat = 0
+    @Published var moveUpOffset: CGFloat = 0
     var elementsAboveAddTextFieldHeight: CGFloat = 0
-    var addTextFieldHeight: CGFloat = 0
+    var addTextFieldHeight: CGFloat = 0 {
+        didSet {
+            if isListWithTextFieldLargeState() {
+                moveUpOffset = moveUpOffset + oldValue - addTextFieldHeight
+                underListViewBottomSpacing = addTextFieldHeight
+            }
+        }
+    }
     var safeAreaTop: CGFloat = 0
     var spacingUnderAddTextField: CGFloat = 0
     var listScrollDisabled: Bool = true
     
-    var addTextFieldOffset: CGFloat = 0
+    @Published var addTextFieldOffset: CGFloat = 0
     var screenHeight: CGFloat = 0
     
     var textFieldOffset: CGFloat = 0
@@ -24,8 +31,6 @@ final class SpaceController: ObservableObject, ListStateContext, ListWithTextFie
     
     var safeAreaTopHeight: CGFloat = 0
     var safeAreaBottomHeight: CGFloat = 0
-
-    var keyboardHeight: CGFloat = 0
     
     @Published var listState: ListState
     @Published var listWithTextFieldState: ListWithTextFieldState

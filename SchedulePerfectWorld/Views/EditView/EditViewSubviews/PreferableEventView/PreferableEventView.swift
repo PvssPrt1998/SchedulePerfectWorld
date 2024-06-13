@@ -14,10 +14,12 @@ struct PreferableEventView: View {
     @ObservedObject var spaceController: SpaceController
     @Environment(\.keyboardHeight) var keyboardHeight
     
+    @State var hiddenAddViewHeight: CGFloat = 0
+    
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
-                PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController).hidden()
+                PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController).hidden().frame(height: hiddenAddViewHeight)
                 Spacer().frame(height: spaceController.spacingUnderAddTextField)
                 PreferableEventsListView(viewModel: viewModel.preferableEventsListViewModel, spaceController: spaceController, focused: focused)
                 Spacer().frame(height: spaceController.underListViewBottomSpacing)
@@ -25,11 +27,10 @@ struct PreferableEventView: View {
             .padding(.top, 8)
                 PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
                     .background(
-                        GeometryReader { preferableEventAddViewGeometry in
-                            Color.clear.padding().onAppear(perform: {
-                                spaceController.addTextFieldHeight = preferableEventAddViewGeometry.size.height
-                            })
-                        }
+                        Color.clear.getHeight(height: $spaceController.addTextFieldHeight)
+                    )
+                    .background(
+                        Color.clear.getHeight(height: $hiddenAddViewHeight)
                     )
                     .offset(x: 0, y: spaceController.addTextFieldOffset - keyboardHeight)
         }

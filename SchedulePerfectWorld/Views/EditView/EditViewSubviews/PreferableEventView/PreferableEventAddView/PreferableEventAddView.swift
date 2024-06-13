@@ -18,6 +18,7 @@ struct PreferableEventAddView: View, KeyboardReadable {
         VStack(spacing: 2) {
             HStack {
                 CaptionText(text: viewModel.captionText, color: viewModel.captionColor)
+                    .padding(.leading, 9)
                 Spacer()
             }
             HStack {

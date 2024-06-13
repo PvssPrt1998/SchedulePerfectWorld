@@ -15,6 +15,7 @@ struct GreetingView: View {
     var body: some View {
         VStack(spacing: 2) {
             CaptionText(text: "Изменить приветствие")
+                .padding(.leading, 9)
             HStack {
                 if viewModel.isEditableView() {
                     TextFieldWithBorderView(binding: $viewModel.text, focused: focused, field: EditView.Field.greetingField)
