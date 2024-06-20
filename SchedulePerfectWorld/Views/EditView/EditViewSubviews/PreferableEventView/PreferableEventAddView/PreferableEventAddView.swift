@@ -26,18 +26,15 @@ struct PreferableEventAddView: View, KeyboardReadable {
                                         focused: focused, field: EditView.Field.preferableEventField,
                                         borderColor: viewModel.textFieldBorderColor)
                 .onTapGesture { }
-                .onReceive(keyboardPublisher) { newIsKeyboardVisible in
-                    if newIsKeyboardVisible {
-                        if focused.wrappedValue == .preferableEventField {
-                            spaceController.listWithTextFieldToLargeState()
-                        }
+                .onChange(of: focused.wrappedValue, { oldValue, newValue in
+                    if oldValue == .preferableEventField && newValue == nil && !spaceController.isAnimationPerformed {
+                        spaceController.listWithTextFieldToNormalState()
                     }
-                    if !newIsKeyboardVisible {
-                        if focused.wrappedValue == .preferableEventField {
-                            spaceController.listWithTextFieldToNormalState()
-                        }
+                    
+                    if oldValue != .preferableEventField && newValue == .preferableEventField && !spaceController.isAnimationPerformed {
+                        spaceController.listWithTextFieldToLargeState()
                     }
-                }
+                })
                 Spacer()
                 AddOrRemoveButton(imageTitle: "plus",
                                   imageTintColor: viewModel.addButtonTintColor,

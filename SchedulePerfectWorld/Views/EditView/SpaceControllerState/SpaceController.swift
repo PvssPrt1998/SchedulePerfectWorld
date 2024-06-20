@@ -19,6 +19,7 @@ final class SpaceController: ObservableObject, ListStateContext, ListWithTextFie
             }
         }
     }
+    
     var safeAreaTop: CGFloat = 0
     var spacingUnderAddTextField: CGFloat = 0
     var listScrollDisabled: Bool = true
@@ -31,6 +32,8 @@ final class SpaceController: ObservableObject, ListStateContext, ListWithTextFie
     
     var safeAreaTopHeight: CGFloat = 0
     var safeAreaBottomHeight: CGFloat = 0
+    
+    var isAnimationPerformed = false
     
     @Published var listState: ListState
     @Published var listWithTextFieldState: ListWithTextFieldState
@@ -81,14 +84,20 @@ final class SpaceController: ObservableObject, ListStateContext, ListWithTextFie
     }
     
     func listWithTextFieldToNormalState() {
+        isAnimationPerformed = true
         withAnimation(.linear(duration: 0.1)) {
             listWithTextFieldState.toNormal()
+        } completion: {
+            self.isAnimationPerformed = false
         }
     }
     
     func listWithTextFieldToLargeState() {
+        isAnimationPerformed = true
         withAnimation(.linear(duration: 0.1)) {
             listWithTextFieldState.toLarge()
+        } completion: {
+            self.isAnimationPerformed = false
         }
     }
     

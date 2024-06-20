@@ -20,12 +20,7 @@ final class GreetingViewModel: ObservableObject, GreetingViewContext {
     }
     
     var buttonImageTitle: String = AddOrRemoveButtonTitle.plus.rawValue
-    var buttonIsActive = false {
-        didSet {
-            buttonIsActive ? (buttonTintColor = .buttonIsActive) : (buttonTintColor = .gray)
-        }
-    }
-    
+    var buttonIsActive = false
     var buttonTintColor: Color = .gray
     
     init(scheduleController: ScheduleController) {

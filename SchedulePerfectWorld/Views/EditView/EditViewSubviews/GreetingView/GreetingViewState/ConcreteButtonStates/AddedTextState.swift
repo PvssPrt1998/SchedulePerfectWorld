@@ -10,6 +10,7 @@ import Foundation
 class AddedTextState: GreetingViewBaseState {
     override func toRemovedTextState() {
         context?.buttonIsActive = false
+        context?.buttonTintColor = .gray
         context?.buttonImageTitle = AddOrRemoveButtonTitle.plus.rawValue
         context?.text = ""
         context?.transition(to: EmptyTextFieldState())

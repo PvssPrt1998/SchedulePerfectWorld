@@ -10,6 +10,7 @@ import SwiftUI
 class EmptyTextFieldState: GreetingViewBaseState {
     override func toEnteredTextState() {
         context?.buttonIsActive = true
+        context?.buttonTintColor = .buttonIsActive
         context?.transition(to: TextFieldWithTextState())
     }
 }
