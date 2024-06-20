@@ -9,6 +9,4 @@
 Используется Coordinator + MVVM. Изменяемые данные сохраняются в память устройства (CoreData)
 Добавлена анимация перехода textField в положение над клавиатурой, когда поле выделено
 
-![IMG_4050](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/5b3d7092-6d65-4fc1-845a-96bf5f247fdd)
-
 <img src="[https://github.com/favicon.ico](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/5b3d7092-6d65-4fc1-845a-96bf5f247fdd)" width="200" height="600">
