@@ -20,6 +20,7 @@ struct PreventiveWorkView: View {
                     AddedText(text: viewModel.getPreventiveWorkText())
                 } else {
                     DatePickerView(title: "Начало: ", time: $viewModel.beginTime)
+                        .padding(.leading, 9)
                     DatePickerView(title: "Конец: ", time: $viewModel.endTime)
                 }
                 Spacer()
