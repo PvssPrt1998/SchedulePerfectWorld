@@ -6,5 +6,9 @@
 Есть возможность добавления особых событий вроде профилактических работ или марафона,
 а также изменить приветствие и тему на темную.
 
-![IMG_3018](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/88c42897-e679-4137-b60a-64402e4ba32a)
-![IMG_3020](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/0040c917-df23-4310-b142-94c09e4ae52c)
+Используется Coordinator + MVVM. Изменяемые данные сохраняются в память устройства (CoreData)
+Добавлена анимация перехода textField в положение над клавиатурой, когда поле выделено
+
+![IMG_4050](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/5b3d7092-6d65-4fc1-845a-96bf5f247fdd)
+
+<img src="[https://github.com/favicon.ico](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/5b3d7092-6d65-4fc1-845a-96bf5f247fdd)" width="200" height="600">
