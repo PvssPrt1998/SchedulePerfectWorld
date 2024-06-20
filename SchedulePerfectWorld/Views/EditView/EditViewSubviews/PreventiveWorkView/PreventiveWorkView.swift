@@ -14,6 +14,7 @@ struct PreventiveWorkView: View {
     var body: some View {
         VStack(spacing: 2) {
             CaptionText(text: "Профилактические работы")
+                .padding(.leading, 9)
             HStack {
                 if viewModel.isAddedState() {
                     AddedText(text: viewModel.getPreventiveWorkText())
