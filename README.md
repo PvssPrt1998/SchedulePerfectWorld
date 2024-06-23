@@ -7,6 +7,15 @@
 а также изменить приветствие и тему на темную.
 
 Используется Coordinator + MVVM. Изменяемые данные сохраняются в память устройства (CoreData)
-Добавлена анимация перехода textField в положение над клавиатурой, когда поле выделено
+Добавлена анимация перехода textField в положение над клавиатурой, когда поле выделено.
+Таблица с особыми событиями при выделении textField сдвигается вверх для удобства
 
-<img src="[https://github.com/favicon.ico](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/5b3d7092-6d65-4fc1-845a-96bf5f247fdd)" width="200" height="600">
+
+![8](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/87ada14d-5157-4a05-915a-aa2ad9b39d2d)
+![7](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/25a67dc1-c10d-4022-bb5f-b455aac80561)
+![6](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/63a86fac-8009-432a-bd45-1d647936b25c)
+![5](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/86f3eba4-b869-4f14-b1ec-a034840be94d)
+![4](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/32b1593e-8254-48e0-9f40-7f710151237d)
+![3](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/bac8a9b9-6615-4a11-9eb9-a8738d806157)
+![2](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/6e71e05a-9cce-4162-943d-74e1188d87ae)
+![1](https://github.com/PvssPrt1998/SchedulePerfectWorld/assets/43918790/b0b3e226-7400-419c-80d3-09eaf5558e51)
