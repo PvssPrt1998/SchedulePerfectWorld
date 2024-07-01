@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModelFactory {
+final class ViewModelFactory {
     
     let scheduleController = ScheduleController()
     let colorSchemeController = ColorSchemeController()

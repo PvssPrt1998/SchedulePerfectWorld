@@ -25,14 +25,14 @@ struct PreferableEventView: View {
                 Spacer().frame(height: spaceController.underListViewBottomSpacing)
             }
             .padding(.top, 8)
-                PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
-                    .background(
-                        Color.clear.getHeight(height: $spaceController.addTextFieldHeight)
-                    )
-                    .background(
-                        Color.clear.getHeight(height: $hiddenAddViewHeight)
-                    )
-                    .offset(x: 0, y: spaceController.addTextFieldOffset - keyboardHeight)
+            PreferableEventAddView(viewModel: viewModel.preferableEventAddViewModel, focused: focused, spaceController: spaceController)
+                .background(
+                    Color.clear.getHeight(height: $spaceController.addTextFieldHeight)
+                )
+                .background(
+                    Color.clear.getHeight(height: $hiddenAddViewHeight)
+                )
+                .offset(x: 0, y: spaceController.addTextFieldOffset - keyboardHeight)
         }
     }
 }

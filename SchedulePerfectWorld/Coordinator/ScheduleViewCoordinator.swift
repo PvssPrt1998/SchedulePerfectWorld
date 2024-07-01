@@ -16,6 +16,7 @@ final class ScheduleViewCoordinator: ObservableObject {
     @Published var appColorScheme: ColorScheme?
     
     private var cancellables = Set<AnyCancellable>()
+    private var viewCancellable: AnyCancellable?
     
     init(router: NavigationRouter, viewModelFactory: ViewModelFactory) {
         self.router = router
@@ -43,14 +44,13 @@ final class ScheduleViewCoordinator: ObservableObject {
     
     
     private func bind(view: ScheduleView) {
-        view.didClickEditButton
+        viewCancellable = view.didClickEditButton
             .receive(on: DispatchQueue.main)
             .sink { [weak self] didClick in
                 if didClick {
                     self?.makeEditViewCoordinator()
                 }
             }
-            .store(in: &cancellables)
     }
     
     private func makeEditViewCoordinator() {

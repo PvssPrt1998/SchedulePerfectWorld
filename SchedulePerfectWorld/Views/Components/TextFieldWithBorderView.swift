@@ -25,7 +25,7 @@ struct TextFieldWithBorderView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(borderColor ?? Color.element)
-                    .northWestShadow(radius: 3, offset: 1)
+                        .northWestShadow(radius: 3, offset: 1)
                     RoundedRectangle(cornerRadius: 8)
                         .inset(by: 3)
                         .fill(Color.element)
